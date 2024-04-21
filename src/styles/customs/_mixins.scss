@@ -1,0 +1,49 @@
+@mixin container($maxWidth: 1600px) {
+	max-width: $maxWidth;
+	margin: 0 auto;
+	padding: 0 2em;
+	width: 100%;
+
+	@include compact {
+		padding: 0 1em;
+	}
+}
+
+@mixin smoothTrans($style: all) {
+	transition: $style 0.2s ease-in-out;
+}
+
+@mixin link {
+	@include smoothTrans;
+
+	&:hover {
+		// text-decoration: underline;
+		// text-underline-offset: 2px;
+		// text-decoration-color: $gold;
+	}
+}
+
+@mixin fullWidth {
+	width: 100vw;
+	position: relative;
+	left: 50%;
+	right: 50%;
+	margin-left: -50vw;
+	margin-right: -50vw;
+}
+
+@mixin borderRadius($radius: 0.25em) {
+	border-radius: $radius;
+}
+
+@mixin clamp($lines: 2) {
+	display: inline;
+	display: -webkit-box;
+	-webkit-line-clamp: $lines;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+}
+
+@mixin boxShadow {
+	box-shadow: 0 0 1em rgba(0, 0, 0, 0.1);
+}

@@ -1,0 +1,30 @@
+.header {
+	display: flex;
+	justify-content: space-between;
+	padding: 1em 0;
+
+	.logo {
+		width: 200px;
+	}
+
+	.menu {
+		display: flex;
+		align-items: center;
+
+		ul {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			gap: 1em;
+
+			a {
+				list-style: none;
+
+				border-radius: 0.5em;
+
+				&:hover {
+				}
+			}
+		}
+	}
+}
