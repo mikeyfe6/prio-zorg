@@ -1,7 +1,10 @@
+@import '../configs/globals';
+
 .header {
 	display: flex;
 	justify-content: space-between;
 	padding: 1em 0;
+	position: relative;
 
 	.logo {
 		width: 200px;
@@ -10,6 +13,10 @@
 	.menu {
 		display: flex;
 		align-items: center;
+
+		@include mobile {
+			display: none;
+		}
 
 		ul {
 			display: flex;
@@ -24,6 +31,31 @@
 
 				&:hover {
 				}
+			}
+		}
+	}
+
+	.mobile {
+		display: none;
+		position: absolute;
+		top: 100%;
+		right: 0;
+		padding: 1.5em 1em;
+		background: $green;
+		color: $white;
+
+		@include borderRadius;
+
+		&.open {
+			display: block;
+		}
+
+		ul {
+			display: flex;
+			flex-direction: column;
+			gap: 0.5em;
+
+			li {
 			}
 		}
 	}

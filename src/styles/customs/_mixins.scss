@@ -4,7 +4,7 @@
 	padding: 0 2em;
 	width: 100%;
 
-	@include compact {
+	@include mobile {
 		padding: 0 1em;
 	}
 }
