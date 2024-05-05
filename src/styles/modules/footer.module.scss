@@ -1,5 +1,73 @@
+@import '../configs/globals';
+
 .footer {
+	$this: &;
+
 	display: flex;
-	justify-content: center;
-	padding: 1em 0;
+	flex-direction: column;
+	padding: 1em 0 0 0;
+
+	&-top-bar {
+		background: linear-gradient(90deg, rgba($black, 0.075), $white);
+		width: 100%;
+
+		@include fullWidth;
+
+		#{$this}-top-wrapper {
+			display: flex;
+			justify-content: space-between;
+
+			@include phablet {
+				flex-direction: column;
+			}
+
+			> div {
+				padding: 2em 0;
+
+				@include phablet {
+					padding: 1.5em 0 0;
+				}
+
+				h6 {
+					margin-bottom: 0.5em;
+				}
+			}
+
+			.logo {
+				width: 250px;
+
+				img {
+					overflow: hidden;
+
+					@include phablet {
+						padding: 0 0 1.5em 0;
+					}
+
+					@include borderRadius;
+				}
+			}
+
+			@include container;
+		}
+	}
+
+	&-bottom-bar {
+		background: rgba($green, 0.5);
+		width: 100%;
+
+		#{$this}-bottom-wrapper {
+			display: flex;
+			justify-content: space-between;
+
+			> div {
+				text-align: center;
+				font-size: 0.875rem;
+				padding: 0.75em 0;
+			}
+
+			@include container;
+		}
+
+		@include fullWidth;
+	}
 }
