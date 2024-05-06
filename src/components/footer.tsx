@@ -8,7 +8,7 @@ import * as footerStyles from '../styles/modules/footer.module.scss';
 const Footer: React.FC = () => {
 	const data = useStaticQuery(graphql`
 		query {
-			pzLogo: file(relativePath: { eq: "pz-logo.jpg" }) {
+			pzLogo: file(relativePath: { eq: "logo/pz-logo.jpg" }) {
 				childImageSharp {
 					gatsbyImageData
 				}
@@ -22,7 +22,7 @@ const Footer: React.FC = () => {
 		<footer className={footerStyles.footer}>
 			<div className={footerStyles.footerTopBar}>
 				<div className={footerStyles.footerTopWrapper}>
-					<div>
+					<div className={footerStyles.list}>
 						<h6>Prio Zorg</h6>
 						<ul>
 							<li>Straat</li>
@@ -31,7 +31,7 @@ const Footer: React.FC = () => {
 						</ul>
 					</div>
 
-					<div>
+					<div className={footerStyles.list}>
 						<h6>Algemeen</h6>
 						<ul>
 							<li>Over Prio Zorg</li>
@@ -40,12 +40,24 @@ const Footer: React.FC = () => {
 						</ul>
 					</div>
 
-					<div>
+					<div className={footerStyles.socials}>
 						<h6>Volg Ons</h6>
 						<ul>
-							<li>Facebook</li>
-							<li>Instagram</li>
-							<li>Whatsapp</li>
+							<li>
+								<a href='#!'>
+									<i className='fa-brands fa-facebook' />
+								</a>
+							</li>
+							<li>
+								<a href='#!'>
+									<i className='fa-brands fa-instagram' />{' '}
+								</a>
+							</li>
+							<li>
+								<a href='#!'>
+									<i className='fa-brands fa-linkedin' />{' '}
+								</a>
+							</li>
 						</ul>
 					</div>
 					<div className={footerStyles.logo}>

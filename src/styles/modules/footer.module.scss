@@ -21,6 +21,40 @@
 				flex-direction: column;
 			}
 
+			.socials ul {
+				display: flex;
+				gap: 1em;
+
+				li {
+					a {
+						color: $black;
+						font-size: 1.75em;
+
+						&:hover {
+							opacity: 0.75;
+						}
+					}
+				}
+			}
+
+			.list ul {
+				display: flex;
+				flex-direction: column;
+				gap: 0.25em;
+
+				li {
+					a {
+						color: $black;
+						font-size: 1.75em;
+
+						&:hover {
+							text-decoration: underline;
+							text-underline-offset: 0.25em;
+						}
+					}
+				}
+			}
+
 			> div {
 				padding: 2em 0;
 

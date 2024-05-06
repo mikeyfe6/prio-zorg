@@ -10,7 +10,7 @@ import * as headerStyles from '../styles/modules/header.module.scss';
 const Header: React.FC = () => {
 	const data = useStaticQuery(graphql`
 		query {
-			pzLogo: file(relativePath: { eq: "pz-logo.jpg" }) {
+			pzLogo: file(relativePath: { eq: "logo/pz-logo.jpg" }) {
 				childImageSharp {
 					gatsbyImageData
 				}
@@ -37,13 +37,19 @@ const Header: React.FC = () => {
 			<div className={headerStyles.menu}>
 				<ul>
 					<li>
-						<Link to='/'>Home</Link>
+						<Link to='/' activeClassName={headerStyles.active}>
+							Home
+						</Link>
 					</li>
 					<li>
-						<Link to='/over-ons'>Over Ons</Link>
+						<Link to='/over-ons' activeClassName={headerStyles.active}>
+							Over Ons
+						</Link>
 					</li>
 					<li>
-						<Link to='/contact'>Contact</Link>
+						<Link to='/contact' activeClassName={headerStyles.active}>
+							Contact
+						</Link>
 					</li>
 				</ul>
 			</div>
@@ -52,13 +58,19 @@ const Header: React.FC = () => {
 				className={`${headerStyles.mobile} ${isOpen ? headerStyles.open : ''}`}>
 				<ul>
 					<li>
-						<Link to='/'>Home</Link>
+						<Link to='/' activeClassName={headerStyles.active}>
+							Home
+						</Link>
 					</li>
 					<li>
-						<Link to='/over-ons'>Over Ons</Link>
+						<Link to='/over-ons' activeClassName={headerStyles.active}>
+							Over Ons
+						</Link>
 					</li>
 					<li>
-						<Link to='/contact'>Contact</Link>
+						<Link to='/contact' activeClassName={headerStyles.active}>
+							Contact
+						</Link>
 					</li>
 				</ul>
 			</div>

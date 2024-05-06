@@ -2,6 +2,8 @@ import * as React from 'react';
 
 import type { HeadFC, PageProps } from 'gatsby';
 
+import { Seo } from '../components/seo';
+
 import Layout from '../components/layout';
 
 const IndexPage: React.FC<PageProps> = () => {
@@ -26,4 +28,4 @@ const IndexPage: React.FC<PageProps> = () => {
 
 export default IndexPage;
 
-export const Head: HeadFC = () => <title>Home Page</title>;
+export const Head: HeadFC = () => <Seo />;
