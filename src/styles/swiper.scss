@@ -1,0 +1,41 @@
+@import './configs/globals';
+
+.swiper {
+	&-button-prev,
+	&-button-next {
+		color: var(--swiper-theme-color);
+		transform: scale(67.5%) translateY(-50%);
+
+		width: 100px !important;
+		height: 100px !important;
+
+		&:hover {
+			background: rgba(white, 0.375);
+
+			@include borderRadius;
+		}
+	}
+
+	&-scrollbar-drag {
+		background: var(--swiper-theme-color);
+	}
+
+	&-pagination-bullet {
+		width: var(
+			--swiper-pagination-bullet-width,
+			var(--swiper-pagination-bullet-size, 10px)
+		) !important;
+		height: var(
+			--swiper-pagination-bullet-height,
+			var(--swiper-pagination-bullet-size, 10px)
+		) !important;
+
+		&:hover {
+			background: var(--swiper-pagination-bullet-inactive-color-hover);
+		}
+	}
+
+	&-pagination-bullet-active {
+		background: var(--swiper-pagination-color, var(--swiper-theme-color));
+	}
+}

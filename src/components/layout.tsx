@@ -1,6 +1,7 @@
 import React from 'react';
 
 import Header from './header';
+import Hero from './hero';
 import Footer from './footer';
 
 import ResponsiveTag from './helpers/respoTag';
@@ -16,6 +17,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
 		<>
 			<div className='prio-zorg'>
 				<Header />
+				<Hero />
 				<main>{children}</main>
 				<Footer />
 			</div>

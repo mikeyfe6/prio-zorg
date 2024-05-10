@@ -7,7 +7,7 @@ require('dotenv').config({
 
 const siteMetadata = {
 	title: `Prio Zorg`,
-	slogan: `The Leaders of Tomorrow`,
+	slogan: ``,
 	description: `Eternity is een culturele instelling die zich bezighoudt met activiteiten, projecten en evenementen op het gebied van muzikale vorming en performance.`,
 
 	siteUrl: `https://www.yourdomain.tld`,

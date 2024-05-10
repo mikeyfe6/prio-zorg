@@ -1,0 +1,32 @@
+@import '../configs/globals';
+
+.hero {
+	$hero: &;
+
+	#{$hero}-wrapper {
+		max-height: 550px;
+
+		@include laptop {
+			max-height: 450px;
+		}
+
+		@include phablet {
+			max-height: 350px;
+		}
+
+		@include mobile {
+			max-height: 250px;
+		}
+
+		@include borderRadius;
+
+		#{$hero}-slide {
+			#{$hero}-image {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+				object-position: center;
+			}
+		}
+	}
+}

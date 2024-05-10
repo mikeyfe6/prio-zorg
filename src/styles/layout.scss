@@ -3,6 +3,18 @@
 @import './configs/resets';
 @import './configs/globals';
 
+:root {
+	--swiper-theme-color: #14967f !important;
+	--swiper-theme-color-hover: #191919 !important;
+	--swiper-scrollbar-drag-bg-color: #14967f !important;
+	--swiper-pagination-color: #14967f !important;
+	--swiper-scrollbar-bg-color: #181a3730 !important;
+	--swiper-pagination-bullet-inactive-color: #fff !important;
+	--swiper-pagination-bullet-inactive-color-hover: #14967f !important;
+	--swiper-pagination-bullet-inactive-opacity: 0.125 !important;
+	--swiper-navigation-sides-offset: 0px !important;
+}
+
 .prio-zorg {
 	display: flex;
 	flex-direction: column;
