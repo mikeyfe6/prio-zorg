@@ -6,9 +6,12 @@ import { Seo } from '../components/seo';
 
 import Layout from '../components/layout';
 
+import Usp from '../components/usp';
+
 const IndexPage: React.FC<PageProps> = () => {
 	return (
 		<Layout>
+			<Usp />
 			<h1>Main Content</h1>
 			<h2>Main Content</h2>
 			<h3>Main Content</h3>

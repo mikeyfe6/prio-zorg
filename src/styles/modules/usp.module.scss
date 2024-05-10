@@ -1,0 +1,73 @@
+@import '../configs/globals';
+
+.usp {
+	display: flex;
+	justify-content: space-evenly;
+	padding: 2em 1em;
+	gap: 1.5em 1em;
+	background: linear-gradient(
+		to left,
+		rgba($black, 0.0375),
+		$white,
+		rgba($black, 0.0375)
+	);
+	margin-bottom: 1em;
+
+	@include borderRadius;
+
+	@include desktop {
+		justify-content: space-between;
+	}
+
+	@include laptop {
+		flex-wrap: wrap;
+	}
+
+	@include mobile {
+		flex-direction: column;
+	}
+
+	> div {
+		display: flex;
+		justify-content: center;
+
+		@include laptop {
+			width: calc(49% - 1em);
+		}
+
+		@include phablet {
+			width: 100%;
+		}
+
+		> a {
+			display: flex;
+			align-items: center;
+			gap: 1em;
+			padding: 1.5em 2em;
+			background: $white;
+			width: 100%;
+			min-width: 250px;
+			font-weight: 500;
+			font-size: 1.125rem;
+
+			> i {
+				font-size: 2em;
+				color: $green;
+				min-width: 40px;
+			}
+
+			@include boxShadow(2);
+			@include borderRadius;
+			@include smoothTrans(transform);
+
+			&:hover {
+				transform: translateY(-0.25em);
+				outline: 2px solid $green;
+			}
+
+			@include laptop {
+				padding: 1.5em;
+			}
+		}
+	}
+}

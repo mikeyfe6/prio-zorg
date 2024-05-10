@@ -10,7 +10,7 @@
 		height: 100px !important;
 
 		&:hover {
-			background: rgba(white, 0.375);
+			background: rgba($white, 0.375);
 
 			@include borderRadius;
 		}

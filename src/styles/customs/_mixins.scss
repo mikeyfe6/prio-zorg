@@ -44,6 +44,11 @@
 	overflow: hidden;
 }
 
-@mixin boxShadow {
-	box-shadow: 0 0 1em rgba(0, 0, 0, 0.1);
+@mixin boxShadow($type: 1) {
+	@if $type == 1 {
+		box-shadow: 0 0 1em rgba(0, 0, 0, 0.1);
+	} @else if $type == 2 {
+		box-shadow: 0 4px 4px 0 rgba(172, 178, 185, 0.5),
+			0 0 8px 0 rgba(172, 178, 185, 0.5);
+	}
 }
