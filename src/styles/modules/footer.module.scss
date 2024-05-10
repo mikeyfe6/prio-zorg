@@ -99,6 +99,10 @@
 			}
 
 			@include container;
+
+			@include mobile {
+				padding: 0 1.5em;
+			}
 		}
 
 		@include fullWidth;

@@ -1,7 +1,7 @@
-@mixin container($maxWidth: 1600px) {
+@mixin container($maxWidth: 1600px, $padding: 2em) {
 	max-width: $maxWidth;
 	margin: 0 auto;
-	padding: 0 2em;
+	padding: 0 $padding;
 	width: 100%;
 
 	@include mobile {
