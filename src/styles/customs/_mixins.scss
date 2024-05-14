@@ -52,3 +52,26 @@
 			0 0 8px 0 rgba(172, 178, 185, 0.5);
 	}
 }
+
+@mixin button($type: 1) {
+	padding: 0.5em 1em;
+	border-width: 2px;
+	border-style: solid;
+	border-color: rgba($green, 0.5);
+
+	@include borderRadius;
+
+	@if $type == 1 {
+		&:hover {
+			background: rgba($green, 0.5);
+		}
+	} @else if $type == 2 {
+		background: rgba($white, 0.95);
+		color: $green;
+
+		&:hover {
+			background: rgba($green, 0.5);
+			color: $white;
+		}
+	}
+}

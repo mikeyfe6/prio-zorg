@@ -31,16 +31,15 @@ const Hero: React.FC = () => {
 		<section className={heroStyles.hero}>
 			<Swiper
 				modules={[A11y, Parallax, Autoplay, Navigation, Pagination]}
-				spaceBetween={10}
 				slidesPerView={1}
-				loop={true}
-				parallax={true}
+				loop
+				parallax
 				navigation
 				pagination={{
 					clickable: true,
 				}}
 				autoplay={{
-					delay: 3500,
+					delay: 5000,
 					disableOnInteraction: true,
 				}}
 				className={heroStyles.heroWrapper}>
@@ -52,6 +51,22 @@ const Hero: React.FC = () => {
 							layout='fullWidth'
 						/>
 					</div>
+					<div className={heroStyles.heroSlideBox}>
+						<h2>Maak kennis met Prio Zorg</h2>
+						<p>
+							Aute reprehenderit nulla consectetur ipsum. Esse fugiat ad magna
+							eu adipisicing est excepteur sit magna qui. Amet ut laboris sunt
+							elit veniam esse. In ullamco deserunt eiusmod ex do id anim.
+							Pariatur ullamco aute aliquip elit exercitation exercitation id
+							non proident do sunt. Culpa qui id commodo do laborum proident
+							aliquip.
+						</p>
+
+						<div className={heroStyles.heroSlideButtons}>
+							<a href='#!'>button 1</a>
+							<a href='#!'>langere button 2</a>
+						</div>
+					</div>
 				</SwiperSlide>
 				<SwiperSlide className={heroStyles.heroSlide}>
 					<div className={heroStyles.heroImage}>
@@ -60,6 +75,16 @@ const Hero: React.FC = () => {
 							alt='hero 2'
 							layout='fullWidth'
 						/>
+					</div>
+					<div className={heroStyles.heroSlideBox}>
+						<p>
+							Aute reprehenderit nulla consectetur ipsum. Esse fugiat ad magna
+							eu adipisicing est excepteur sit magna qui. Amet ut laboris sunt
+							elit veniam esse. In ullamco deserunt eiusmod ex do id anim.
+							Pariatur ullamco aute aliquip elit exercitation exercitation id
+							non proident do sunt. Culpa qui id commodo do laborum proident
+							aliquip.
+						</p>
 					</div>
 				</SwiperSlide>
 				<SwiperSlide className={heroStyles.heroSlide}>
@@ -70,8 +95,19 @@ const Hero: React.FC = () => {
 							layout='fullWidth'
 						/>
 					</div>
+					<div className={heroStyles.heroSlideBox}>
+						<p>
+							Aute reprehenderit nulla consectetur ipsum. Esse fugiat ad magna
+							eu adipisicing est excepteur sit magna qui. Amet ut laboris sunt
+							elit veniam esse. In ullamco deserunt eiusmod ex do id anim.
+							Pariatur ullamco aute aliquip elit exercitation exercitation id
+							non proident do sunt. Culpa qui id commodo do laborum proident
+							aliquip.
+						</p>
+					</div>
 				</SwiperSlide>
 			</Swiper>
+			{/* <div className={heroStyles.heroBox}>yooo</div> */}
 		</section>
 	);
 };
