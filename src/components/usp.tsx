@@ -1,8 +1,5 @@
 import React from 'react';
 
-import { graphql, useStaticQuery, Link } from 'gatsby';
-import { GatsbyImage, getImage, StaticImage } from 'gatsby-plugin-image';
-
 import * as uspStyles from '../styles/modules/usp.module.scss';
 
 const Usp: React.FC = () => {

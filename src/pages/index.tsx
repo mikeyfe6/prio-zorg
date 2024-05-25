@@ -7,6 +7,7 @@ import { Seo } from '../components/seo';
 import Layout from '../components/layout';
 
 import Usp from '../components/usp';
+import Actual from '../components/actual';
 
 const IndexPage: React.FC<PageProps> = () => {
 	return (
@@ -25,6 +26,7 @@ const IndexPage: React.FC<PageProps> = () => {
 				tempor labore aliqua excepteur quis laboris adipisicing. Esse nisi ea
 				velit id elit qui consectetur veniam quis officia ex do.
 			</p>
+			<Actual />
 		</Layout>
 	);
 };

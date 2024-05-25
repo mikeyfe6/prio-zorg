@@ -1,0 +1,41 @@
+@import '../configs/globals';
+
+.collapsible {
+	display: flex;
+	justify-content: space-between;
+	margin: 2em 0;
+	border: 1px solid rgba($black, 1);
+
+	@include borderRadius;
+
+	@include phablet {
+		flex-direction: column;
+	}
+
+	.headers {
+		display: flex;
+		flex-direction: column;
+		border-right: 1px solid rgba($black, 1);
+		background-color: rgba($green, 0.375);
+
+		@include phablet {
+			border-right: none;
+			border-bottom: 1px solid rgba($black, 1);
+		}
+
+		.header {
+			cursor: pointer;
+			white-space: nowrap;
+			padding: 0.5em 1em;
+
+			&.active {
+				background-color: rgba($green, 0.5);
+			}
+		}
+	}
+
+	.content {
+		flex-grow: 1;
+		padding: 1em;
+	}
+}

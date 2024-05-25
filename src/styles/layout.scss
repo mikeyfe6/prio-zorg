@@ -92,9 +92,9 @@ h6 {
 }
 
 p {
-	@include mobile {
-		font-size: 0.75rem;
-	}
+	// @include mobile {
+	// 	font-size: 0.75rem;
+	// }
 }
 
 footer {
