@@ -70,6 +70,9 @@
 				gap: 1em;
 
 				> a {
+					// &:first-of-type {
+					// 	@include button(1);
+					// }
 					@include button(2);
 				}
 			}

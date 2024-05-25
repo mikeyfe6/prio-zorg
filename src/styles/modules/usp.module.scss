@@ -62,7 +62,7 @@
 
 			&:hover {
 				transform: translateY(-0.25em);
-				outline: 2px solid $green;
+				outline: 1px solid $green;
 			}
 
 			@include laptop {

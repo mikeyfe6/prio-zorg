@@ -22,21 +22,26 @@
 			display: flex;
 			justify-content: space-between;
 			align-items: center;
-			gap: 1em;
+			border: 1px solid rgba($black, 1);
+
+			min-height: 40px;
+			overflow: hidden;
+
+			@include borderRadius;
+			@include boxShadow(1);
 
 			li {
 				a {
-					padding: 0.5em 1em;
-					border: 2px solid rgba($green, 0.5);
+					padding: 0.75em 1em;
+
+					@include smoothTrans;
 
 					&.active {
-						background: rgba($green, 0.25);
+						background: rgba($green, 0.375);
 					}
 
-					@include borderRadius;
-
 					&:hover {
-						background: rgba($green, 0.5);
+						background: rgba($green, 0.625);
 					}
 				}
 			}
