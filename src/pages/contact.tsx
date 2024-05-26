@@ -10,7 +10,7 @@ const ContactPage: React.FC<PageProps> = () => {
 	return <Layout>
                 <h2>Contact</h2>
                 <br />
-                <p>[Hier komt het formulier]<p>
+                <p>[Hier komt het formulier]</p>
             </Layout>;
 };
 
