@@ -7,7 +7,11 @@ import { Seo } from '../components/seo';
 import Layout from '../components/layout';
 
 const ContactPage: React.FC<PageProps> = () => {
-	return <Layout>Contact</Layout>;
+	return <Layout>
+                <h2>Contact</h2>
+                <br />
+                <p>[Hier komt het formulier]<p>
+            </Layout>;
 };
 
 export default ContactPage;
