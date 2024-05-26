@@ -53,25 +53,37 @@
 		position: absolute;
 		top: 100%;
 		right: 0;
-		padding: 1.5em 1em;
-		background: rgba($green, 0.75);
+
 		color: $white;
+		width: 50%;
+		z-index: 2;
+		overflow: hidden;
 
 		@include borderRadius;
 
-		&.open {
-			display: block;
+		@include mobile {
+			&.open {
+				display: block;
+			}
 		}
 
 		ul {
 			display: flex;
 			flex-direction: column;
-			gap: 0.5em;
 
 			li {
 				a {
+					padding: 1em 1.5em;
+					display: block;
+					background: rgba($green, 0.9);
+
 					&.active {
-						color: $black;
+						background: rgba($green, 1);
+
+						&:before {
+							content: '>';
+							padding-right: 0.5em;
+						}
 					}
 				}
 			}
