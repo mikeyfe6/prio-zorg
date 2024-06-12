@@ -27,11 +27,12 @@ const Form: React.FC = () => {
 				</p>
 			</div>
 			<form
-				name='contact'
+				name='priozorg-netlifyform'
 				method='POST'
 				data-netlify='true'
-				action='/success.tsx'>
-				<input type='hidden' name='contact' value='contact' />
+				action='/success'>
+				<input type='hidden' name='form-name' value='priozorg-netlifyform' />
+
 				<h5>Vul hieronder je gegevens in</h5>
 				<div>
 					<label htmlFor='formFirstName'>Voornaam</label>
