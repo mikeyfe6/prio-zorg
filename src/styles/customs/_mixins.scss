@@ -58,6 +58,7 @@
 	border-width: 1px;
 	border-style: solid;
 	border-color: rgba($black, 0.875);
+	cursor: pointer;
 
 	@include borderRadius;
 	@include boxShadow(1);

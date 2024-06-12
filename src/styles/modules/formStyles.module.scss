@@ -1,0 +1,58 @@
+@import '../configs/globals';
+
+.form {
+	display: flex;
+	gap: 3em;
+	margin: 1.5em 0;
+
+	@include phablet {
+		flex-direction: column;
+	}
+
+	> div {
+		flex: 50%;
+	}
+
+	> form {
+		flex: 50%;
+		display: flex;
+		flex-direction: column;
+		gap: 1em;
+
+		> div {
+			display: flex;
+
+			> label {
+				background: rgba($green, 0.5);
+				padding: 0.5em;
+				display: inline-block;
+				border-radius: 0.5em 0 0 0.5em;
+				min-width: 175px;
+				text-align: right;
+				border: 1px solid $black;
+				font-weight: 500;
+			}
+
+			> input {
+				border: 1px solid $black;
+				padding: 0.5em;
+				border-radius: 0 0.5em 0.5em 0;
+				border-left: none;
+				flex-grow: 1;
+			}
+
+			> textarea {
+				border: 1px solid $black;
+				padding: 0.5em;
+				border-radius: 0 0.5em 0.5em 0;
+				border-left: none;
+				flex-grow: 1;
+			}
+
+			> button {
+				@include button(2);
+				margin-left: auto;
+			}
+		}
+	}
+}

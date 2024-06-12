@@ -1,42 +1,44 @@
 @import '../configs/globals';
 
-.collapsible {
-	display: flex;
-	justify-content: space-between;
-	margin: 2em 0;
-	border: 1px solid rgba($black, 1);
-
-	@include borderRadius;
-	@include boxShadow(1);
-
-	@include phablet {
-		flex-direction: column;
-	}
-
-	.headers {
+.actual {
+	&.collapsible {
 		display: flex;
-		flex-direction: column;
-		border-right: 1px solid rgba($black, 1);
-		background: rgba($green, 0.375);
+		justify-content: space-between;
+		margin: 2em 0;
+		border: 1px solid rgba($black, 1);
+
+		@include borderRadius;
+		@include boxShadow(1);
 
 		@include phablet {
-			border-right: none;
-			border-bottom: 1px solid rgba($black, 1);
+			flex-direction: column;
 		}
 
-		.header {
-			cursor: pointer;
-			white-space: nowrap;
-			padding: 0.5em 1em;
+		.headers {
+			display: flex;
+			flex-direction: column;
+			border-right: 1px solid rgba($black, 1);
+			background: rgba($green, 0.375);
 
-			&.active {
-				background: rgba($green, 0.5);
+			@include phablet {
+				border-right: none;
+				border-bottom: 1px solid rgba($black, 1);
+			}
+
+			.header {
+				cursor: pointer;
+				white-space: nowrap;
+				padding: 0.5em 1em;
+
+				&.active {
+					background: rgba($green, 0.5);
+				}
 			}
 		}
-	}
 
-	.content {
-		flex-grow: 1;
-		padding: 1em;
+		.content {
+			flex-grow: 1;
+			padding: 1em;
+		}
 	}
 }

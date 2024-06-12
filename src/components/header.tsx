@@ -29,7 +29,9 @@ const Header: React.FC = () => {
 	return (
 		<header className={headerStyles.header}>
 			<div className={headerStyles.logo}>
-				{pzLogo && <GatsbyImage image={pzLogo} alt='PZ Logo' />}
+				<Link to='/'>
+					{pzLogo && <GatsbyImage image={pzLogo} alt='PZ Logo' />}
+				</Link>
 			</div>
 
 			<Hamburger isOpen={isOpen} toggleMenu={toggleMenu} />

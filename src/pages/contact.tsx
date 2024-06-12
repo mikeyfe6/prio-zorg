@@ -5,13 +5,16 @@ import type { HeadFC, PageProps } from 'gatsby';
 import { Seo } from '../components/seo';
 
 import Layout from '../components/layout';
+import Form from '../components/form';
 
 const ContactPage: React.FC<PageProps> = () => {
-	return <Layout>
-                <h2>Contact</h2>
-                <br />
-                <p>[Hier komt het formulier]</p>
-            </Layout>;
+	return (
+		<Layout>
+			<h2>Contact</h2>
+
+			<Form />
+		</Layout>
+	);
 };
 
 export default ContactPage;
