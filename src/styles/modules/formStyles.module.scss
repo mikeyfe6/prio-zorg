@@ -2,7 +2,7 @@
 
 .form {
 	display: flex;
-	gap: 3em;
+	gap: 2.5em 3.5em;
 	margin: 1.5em 0;
 
 	@include phablet {
@@ -31,6 +31,7 @@
 				font-weight: 500;
 				display: flex;
 				justify-content: flex-end;
+				cursor: pointer;
 
 				&:not([for='formMessage']) {
 					@include mobile {
@@ -62,7 +63,7 @@
 			}
 
 			> button {
-				@include button(2);
+				@include button(3);
 
 				margin-left: auto;
 			}

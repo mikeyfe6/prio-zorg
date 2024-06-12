@@ -20,35 +20,44 @@
 				flex-direction: column;
 			}
 
-			.socials ul {
-				display: flex;
-				gap: 1em;
+			.socials {
+				h6 {
+					margin-bottom: 0.75em;
+				}
 
-				li {
-					a {
-						color: $black;
-						font-size: 1.75em;
+				ul {
+					display: flex;
+					gap: 1em;
 
-						&:hover {
-							opacity: 0.75;
+					li {
+						a {
+							color: $black;
+							font-size: 1.75em;
+
+							&:hover {
+								opacity: 0.75;
+							}
 						}
 					}
 				}
 			}
 
-			.list ul {
-				display: flex;
-				flex-direction: column;
-				gap: 0.25em;
+			.list {
+				h6 {
+					margin-bottom: 0.75em;
+				}
 
-				li {
-					a {
-						color: $black;
-						font-size: 1.75em;
+				ul {
+					display: flex;
+					flex-direction: column;
+					gap: 0.5em;
 
-						&:hover {
-							text-decoration: underline;
-							text-underline-offset: 0.25em;
+					li {
+						a {
+							i {
+								margin-right: 0.5em;
+								color: $black;
+							}
 						}
 					}
 				}
@@ -59,10 +68,6 @@
 
 				@include phablet {
 					padding: 1.5em 0 0;
-				}
-
-				h6 {
-					margin-bottom: 0.5em;
 				}
 			}
 

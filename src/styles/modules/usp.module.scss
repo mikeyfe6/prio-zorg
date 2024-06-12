@@ -44,7 +44,7 @@
 			align-items: center;
 			gap: 1em;
 			padding: 1.5em 2em;
-			background: $white;
+
 			width: 100%;
 			min-width: 250px;
 			font-weight: 500;
@@ -63,6 +63,13 @@
 			&:hover {
 				transform: translateY(-0.25em);
 				outline: 1px solid $green;
+
+				background: linear-gradient(
+					to left,
+					rgba($green, 0.1),
+					$white,
+					rgba($green, 0.01)
+				);
 			}
 
 			@include laptop {

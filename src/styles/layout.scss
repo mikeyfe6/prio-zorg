@@ -22,11 +22,6 @@
 	margin: 0;
 }
 
-main {
-	flex: 1;
-	padding: 1em 0;
-}
-
 body {
 	font-family: 'Poppins', sans-serif;
 
@@ -34,6 +29,26 @@ body {
 
 	@include toosmall {
 		display: none;
+	}
+}
+
+main {
+	flex: 1;
+	padding: 1em 0 2em;
+
+	a:not(#usp a) {
+		&:hover {
+			text-decoration: underline;
+			text-underline-offset: 0.25em;
+		}
+	}
+
+	p {
+		max-width: 80ch;
+
+		&:not(:last-of-type) {
+			margin-bottom: 1em;
+		}
 	}
 }
 
@@ -91,10 +106,13 @@ h6 {
 	}
 }
 
-p {
-	// @include mobile {
-	// 	font-size: 0.75rem;
-	// }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin-bottom: 0.5em;
 }
 
 footer {

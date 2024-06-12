@@ -33,10 +33,6 @@
 				padding: 1.5em;
 				background: $white;
 
-				> h2 {
-					margin-bottom: 0.25em;
-				}
-
 				> p {
 					font-size: large;
 
@@ -73,7 +69,7 @@
 					// &:first-of-type {
 					// 	@include button(1);
 					// }
-					@include button(2);
+					@include button(3);
 				}
 			}
 		}

@@ -13,8 +13,26 @@ const Form: React.FC = () => {
 					occaecat non cupidatat sint dolore ullamco ut fugiat culpa. Deserunt
 					exercitation sint sint irure aute aute pariatur aliqua.
 				</p>
+				<p>
+					Est amet laboris et ad mollit officia commodo qui duis esse qui
+					exercitation in excepteur. Culpa sunt sit exercitation laboris
+					occaecat non cupidatat sint dolore ullamco ut fugiat culpa. Deserunt
+					exercitation sint sint irure aute aute pariatur aliqua.
+				</p>
+				<p>
+					Est amet laboris et ad mollit officia commodo qui duis esse qui
+					exercitation in excepteur. Culpa sunt sit exercitation laboris
+					occaecat non cupidatat sint dolore ullamco ut fugiat culpa. Deserunt
+					exercitation sint sint irure aute aute pariatur aliqua.
+				</p>
 			</div>
-			<form name='contact' method='POST' data-netlify='true'>
+			<form
+				name='contact'
+				method='POST'
+				data-netlify='true'
+				action='/success.tsx'>
+				<input type='hidden' name='contact' value='contact' />
+				<h5>Vul hieronder je gegevens in</h5>
 				<div>
 					<label htmlFor='formFirstName'>Voornaam</label>
 					<input type='text' name='firstName' id='formFirstName' />

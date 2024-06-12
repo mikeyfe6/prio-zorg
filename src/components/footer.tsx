@@ -25,9 +25,20 @@ const Footer: React.FC = () => {
 					<div className={footerStyles.list}>
 						<h6>Prio Zorg</h6>
 						<ul>
-							<li>Straat</li>
-							<li>Plaats</li>
-							<li>Kvk</li>
+							<li>Straatnaam 123</li>
+							<li>Plaatsnaam, 1111 XY</li>
+							<li>
+								<a href='tel:31612345678'>
+									<i className='fa-solid fa-phone fa-lg' />
+									+31612345678
+								</a>
+							</li>
+							<li>
+								<a href='mailto:priozorg@test.nl'>
+									<i className='fa-solid fa-envelope fa-lg' />
+									priozorg@test.nl
+								</a>
+							</li>
 						</ul>
 					</div>
 

@@ -4,7 +4,7 @@ import * as uspStyles from '../styles/modules/usp.module.scss';
 
 const Usp: React.FC = () => {
 	return (
-		<section className={uspStyles.usp}>
+		<section className={uspStyles.usp} id='usp'>
 			<div>
 				<a href='#!'>
 					<i className='fa-solid fa-file-invoice-dollar' />

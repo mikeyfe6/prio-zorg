@@ -46,7 +46,7 @@ const Actual: React.FC = () => {
 				))}
 			</div>
 			<div className={actualStyles.content}>
-				{activeIndex !== null && data[activeIndex].content}
+				<p>{activeIndex !== null && data[activeIndex].content}</p>
 			</div>
 		</section>
 	);
