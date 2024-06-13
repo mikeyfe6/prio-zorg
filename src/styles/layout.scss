@@ -34,20 +34,44 @@ body {
 
 main {
 	flex: 1;
-	padding: 1em 0 2em;
-
-	a:not(#usp a) {
-		&:hover {
-			text-decoration: underline;
-			text-underline-offset: 0.25em;
-		}
-	}
+	padding: 1.5em 0 2em;
 
 	p {
 		max-width: 80ch;
 
 		&:not(:last-of-type) {
 			margin-bottom: 1em;
+		}
+	}
+}
+
+a:not(#usp a, #socials a) {
+	main & {
+		@include smoothTrans(text-decoration-line);
+		font-weight: 600;
+
+		&:hover {
+			text-decoration: underline;
+			text-decoration-thickness: 2px;
+			text-underline-offset: 0.25em;
+			text-decoration-color: $green;
+		}
+	}
+
+	footer & {
+		@include smoothTrans(text-decoration-line);
+
+		&:after {
+			content: '➤';
+			visibility: hidden;
+			color: $green;
+			margin-left: 0.5em;
+		}
+
+		&:hover {
+			&:after {
+				visibility: visible;
+			}
 		}
 	}
 }

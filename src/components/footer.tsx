@@ -30,13 +30,13 @@ const Footer: React.FC = () => {
 							<li>
 								<a href='tel:31612345678'>
 									<i className='fa-solid fa-phone fa-lg' />
-									+31612345678
+									<span>+31612345678</span>
 								</a>
 							</li>
 							<li>
 								<a href='mailto:priozorg@test.nl'>
 									<i className='fa-solid fa-envelope fa-lg' />
-									priozorg@test.nl
+									<span>priozorg@test.nl</span>
 								</a>
 							</li>
 						</ul>
@@ -45,13 +45,17 @@ const Footer: React.FC = () => {
 					<div className={footerStyles.list}>
 						<h6>Algemeen</h6>
 						<ul>
-							<li>Over Prio Zorg</li>
-							<li>Vacatures</li>
+							<li>
+								<Link to='/'>Over Prio Zorg</Link>
+							</li>
+							<li>
+								<Link to='/'>Vacatures</Link>
+							</li>
 							<li></li>
 						</ul>
 					</div>
 
-					<div className={footerStyles.socials}>
+					<div className={footerStyles.socials} id='socials'>
 						<h6>Volg Ons</h6>
 						<ul>
 							<li>
