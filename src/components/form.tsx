@@ -30,9 +30,8 @@ const Form: React.FC = () => {
 				name='priozorg-netlifyform'
 				method='POST'
 				data-netlify='true'
-				netlify-honeypot='bot-field'
+				data-netlify-honeypot='bot-field'
 				action='/success/'>
-				<input type='hidden' name='bot-field' />
 				<input type='hidden' name='form-name' value='priozorg-netlifyform' />
 
 				<h5>Vul hieronder je gegevens in</h5>
