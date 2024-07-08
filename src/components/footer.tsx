@@ -25,12 +25,12 @@ const Footer: React.FC = () => {
 					<div className={footerStyles.list}>
 						<h6>Prio Zorg</h6>
 						<ul>
-							<li>Straatnaam 123</li>
-							<li>Plaatsnaam, 1111 XY</li>
+							<li>Sleewijkstraat 54</li>
+							<li>1104 TW Amsterdam</li>
 							<li>
 								<a href='tel:31612345678'>
 									<i className='fa-solid fa-phone fa-lg' />
-									<span>+31612345678</span>
+									<span>+31 (0) 612 345 678</span>
 								</a>
 							</li>
 							<li>
@@ -39,10 +39,13 @@ const Footer: React.FC = () => {
 									<span>priozorg@test.nl</span>
 								</a>
 							</li>
+							<li>KVK: 84381000</li>
+							<li>BTW: NL003955140B97</li>
+							<li>IBAN: NL47KNAB0418057419</li>
 						</ul>
 					</div>
 
-					<div className={footerStyles.list}>
+					<div className={footerStyles.general}>
 						<h6>Algemeen</h6>
 						<ul>
 							<li>
@@ -55,37 +58,52 @@ const Footer: React.FC = () => {
 						</ul>
 					</div>
 
-					<div className={footerStyles.socials} id='socials'>
+					<div className={footerStyles.socials} id='footer-socials'>
 						<h6>Volg Ons</h6>
 						<ul>
-							<li>
+							{/* <li>
 								<a href='#!'>
 									<i className='fa-brands fa-facebook' />
 								</a>
-							</li>
-							<li>
+							</li> */}
+							{/* <li>
 								<a href='#!'>
 									<i className='fa-brands fa-instagram' />{' '}
 								</a>
-							</li>
+							</li> */}
 							<li>
-								<a href='#!'>
+								<a
+									href='https://www.linkedin.com/in/prio-zorg-a4b783285/'
+									rel='noopener noreferrer'
+									target='_blank'>
 									<i className='fa-brands fa-linkedin' />{' '}
 								</a>
 							</li>
 						</ul>
 					</div>
-					<div className={footerStyles.logo}>
-						{pzLogo && <GatsbyImage image={pzLogo} alt='PZ Logo' />}
+					<div className={footerStyles.logo} id='footer-logo'>
+						{pzLogo && (
+							<Link to='/'>
+								<GatsbyImage image={pzLogo} alt='PZ Logo' />
+							</Link>
+						)}
 					</div>
 				</div>
 			</div>
-			<div className={footerStyles.footerBottomBar}>
+			<div className={footerStyles.footerBottomBar} id='footer-bottombar'>
 				<div className={footerStyles.footerBottomWrapper}>
 					<div>
 						<b>©</b> 2024 · Prio Zorg
 					</div>
-					<div>Powered by Menefex</div>
+					<div>
+						Powered by{' '}
+						<a
+							href='https://menefex.nl/'
+							rel='noopener noreferrer'
+							target='_blank'>
+							Menefex
+						</a>
+					</div>
 				</div>
 			</div>
 		</footer>

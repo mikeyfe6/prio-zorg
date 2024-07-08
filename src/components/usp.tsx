@@ -8,25 +8,25 @@ const Usp: React.FC = () => {
 			<div>
 				<a href='#!'>
 					<i className='fa-solid fa-file-invoice-dollar' />
-					USP Item 1
+					Coaching
 				</a>
 			</div>
 			<div>
 				<a href='#!'>
 					<i className='fa-solid fa-hospital-user' />
-					USP Item 2
+					Mentoring
 				</a>
 			</div>
 			<div>
 				<a href='#!'>
 					<i className='fa-solid fa-hand-holding-medical' />
-					USP Item 3
+					(Opvoed) ondersteuning
 				</a>
 			</div>
 			<div>
 				<a href='#!'>
 					<i className='fa-solid fa-user-doctor' />
-					USP Item 4
+					Bemiddeling
 				</a>
 			</div>
 		</section>

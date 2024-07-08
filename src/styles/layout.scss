@@ -37,6 +37,8 @@ main {
 	padding: 1.5em 0 2em;
 
 	p {
+		font-size: 1.125rem;
+		letter-spacing: 0.25px;
 		max-width: 80ch;
 
 		&:not(:last-of-type) {
@@ -45,10 +47,11 @@ main {
 	}
 }
 
-a:not(#usp a, #socials a) {
+a:not(#usp a, #footer-socials a, #footer-logo a, #footer-bottombar a) {
 	main & {
-		@include smoothTrans(text-decoration-line);
 		font-weight: 600;
+
+		@include smoothTrans(text-decoration-line);
 
 		&:hover {
 			text-decoration: underline;
@@ -73,6 +76,16 @@ a:not(#usp a, #socials a) {
 				visibility: visible;
 			}
 		}
+	}
+}
+
+.prio {
+	&-intro {
+		line-height: 27.5px;
+	}
+
+	&-title {
+		@extend h2;
 	}
 }
 
