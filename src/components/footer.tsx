@@ -49,10 +49,10 @@ const Footer: React.FC = () => {
 						<h6>Algemeen</h6>
 						<ul>
 							<li>
-								<Link to='/'>Over Prio Zorg</Link>
+								<Link to='/over-ons/'>Over Prio Zorg</Link>
 							</li>
 							<li>
-								<Link to='/'>Vacatures</Link>
+								<Link to='/contact/'>Contact</Link>
 							</li>
 							<li></li>
 						</ul>
