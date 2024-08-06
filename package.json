@@ -12,11 +12,12 @@
     "start": "gatsby develop",
     "build": "gatsby build",
     "serve": "gatsby serve",
-    "clean": "gatsby clean",
+    "clean": "gatsby clean && yarn cache clean",
+    "reinstall": "rm -rf node_modules package-lock.json yarn.lock && yarn",
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "gatsby": "^5.13.6",
+    "gatsby": "^5.13.7",
     "gatsby-plugin-image": "^3.13.1",
     "gatsby-plugin-manifest": "^5.13.1",
     "gatsby-plugin-sass": "^6.13.1",
@@ -27,13 +28,13 @@
     "gatsby-transformer-sharp": "^5.13.1",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "sass": "^1.77.6",
-    "swiper": "^11.1.4"
+    "sass": "^1.77.8",
+    "swiper": "^11.1.9"
   },
   "devDependencies": {
-    "@types/node": "^20.14.10",
+    "@types/node": "^22.1.0",
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
-    "typescript": "^5.5.3"
+    "typescript": "^5.5.4"
   }
 }
