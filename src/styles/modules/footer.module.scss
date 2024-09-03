@@ -13,11 +13,24 @@
 		@include fullWidth;
 
 		#{$this}-top-wrapper {
-			display: flex;
-			justify-content: space-between;
+			display: grid;
+			grid-template-columns: repeat(4, 1fr);
+			gap: 3em 1.5em;
 
-			@include phablet {
-				flex-direction: column;
+			@include container($paddingY: 2em);
+
+			@include laptop {
+				grid-template-columns: repeat(2, 1fr);
+			}
+
+			@include tablet {
+				padding-top: 2.5em;
+				padding-bottom: 2.5em;
+			}
+
+			@include mobile {
+				grid-template-columns: 1fr;
+				gap: 2em;
 			}
 
 			.socials {
@@ -32,7 +45,7 @@
 					li {
 						a {
 							color: $black;
-							font-size: 1.75em;
+							font-size: 1.875em;
 
 							&:hover {
 								opacity: 0.75;
@@ -48,11 +61,11 @@
 				ul {
 					li {
 						&:nth-of-type(3) {
-							margin-top: 1em;
+							margin-top: 1.5em;
 						}
 
 						&:nth-of-type(4) {
-							margin-bottom: 1em;
+							margin-bottom: 1.5em;
 						}
 					}
 				}
@@ -79,39 +92,32 @@
 				}
 			}
 
-			> div {
-				padding: 2em 0;
-
-				@include phablet {
-					padding: 1.5em 0 0;
-				}
-			}
-
 			.logo {
 				width: 250px;
 
 				img {
 					overflow: hidden;
 
-					@include phablet {
-						padding: 0 0 1.5em 0;
-					}
-
 					@include borderRadius;
 				}
 			}
-
-			@include container;
 		}
 	}
 
 	&-bottom-bar {
 		background: rgba($green, 0.5);
-		width: 100%;
+
+		@include fullWidth;
 
 		#{$this}-bottom-wrapper {
 			display: flex;
 			justify-content: space-between;
+
+			@include container;
+
+			@include mobile {
+				padding: 0 1.5em;
+			}
 
 			> div {
 				text-align: center;
@@ -129,14 +135,6 @@
 					}
 				}
 			}
-
-			@include container;
-
-			@include mobile {
-				padding: 0 1.5em;
-			}
 		}
-
-		@include fullWidth;
 	}
 }

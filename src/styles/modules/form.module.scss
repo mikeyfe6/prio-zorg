@@ -11,6 +11,31 @@
 
 	> div {
 		flex: 50%;
+
+		ul {
+			margin-top: 1.25em;
+
+			> li {
+				> span {
+					font-weight: 600;
+				}
+
+				> a {
+					font-weight: normal !important;
+				}
+
+				&:first-of-type {
+					font-size: x-large;
+					font-weight: 600;
+				}
+
+				&:not(:first-of-type)::before {
+					content: '✦';
+					margin-right: 0.5em;
+					color: $green;
+				}
+			}
+		}
 	}
 
 	> form {
@@ -33,15 +58,15 @@
 				justify-content: flex-end;
 				cursor: pointer;
 
+				@include mobile {
+					min-width: 145px;
+					font-size: 0.875rem;
+				}
+
 				&:not([for='formMessage']) {
 					@include mobile {
 						align-items: center;
 					}
-				}
-
-				@include mobile {
-					min-width: 145px;
-					font-size: 0.875rem;
 				}
 			}
 
@@ -63,9 +88,9 @@
 			}
 
 			> button {
-				@include button(3);
-
 				margin-left: auto;
+
+				@include button(3);
 			}
 		}
 	}

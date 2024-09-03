@@ -33,16 +33,6 @@
 				padding: 1.5em;
 				background: $white;
 
-				> p {
-					font-size: large;
-
-					@include mobile {
-						font-size: medium;
-					}
-
-					@include clamp(2);
-				}
-
 				@include borderRadius(0.25em 0 0 0.25em);
 
 				@include laptop {
@@ -57,6 +47,16 @@
 
 				@include mobile {
 					padding: 1em 1em 2em 1em;
+				}
+
+				> p {
+					font-size: large;
+
+					@include clamp(2);
+
+					@include mobile {
+						font-size: medium;
+					}
 				}
 			}
 

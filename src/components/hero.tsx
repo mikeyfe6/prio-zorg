@@ -1,12 +1,11 @@
 import React from 'react';
 
-import { graphql, useStaticQuery, Link } from 'gatsby';
-import { GatsbyImage, getImage, StaticImage } from 'gatsby-plugin-image';
+import { Link } from 'gatsby';
+import { StaticImage } from 'gatsby-plugin-image';
 
 import {
 	Navigation,
 	Pagination,
-	// Scrollbar,
 	A11y,
 	Parallax,
 	Autoplay,
@@ -17,7 +16,6 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/scss';
 import 'swiper/scss/navigation';
 import 'swiper/scss/pagination';
-// import 'swiper/scss/scrollbar';
 import 'swiper/scss/parallax';
 import 'swiper/scss/autoplay';
 import 'swiper/scss/a11y';
@@ -46,37 +44,30 @@ const Hero: React.FC = () => {
 				<SwiperSlide className={heroStyles.heroSlide}>
 					<div className={heroStyles.heroImage}>
 						<StaticImage
-							src='../images/stockimg.jpg'
+							src='../images/hands.jpg'
 							alt='hero 1'
 							layout='fullWidth'
 						/>
 					</div>
 					<div className={heroStyles.heroSlideBox}>
-						<h2>Maak kennis met Prio Zorg</h2>
-						<p>
-							Aute reprehenderit nulla consectetur ipsum. Esse fugiat ad magna
-							eu adipisicing est excepteur sit magna qui. Amet ut laboris sunt
-							elit veniam esse. In ullamco deserunt eiusmod ex do id anim.
-							Pariatur ullamco aute aliquip elit exercitation exercitation id
-							non proident do sunt. Culpa qui id commodo do laborum proident
-							aliquip.
-						</p>
+						<h1>Maak kennis met Prio Zorg</h1>
+						<p>Samen op weg naar een zelfredzame en betekenisvolle toekomst</p>
 
 						<div className={heroStyles.heroSlideButtons}>
-							<a href='#!'>button 1</a>
-							<a href='#!'>langere button 2</a>
+							<Link to='/over-ons/'>Meer over ons</Link>
+							<Link to='/contact/'>Neem contact op</Link>
 						</div>
 					</div>
 				</SwiperSlide>
 				<SwiperSlide className={heroStyles.heroSlide}>
 					<div className={heroStyles.heroImage}>
 						<StaticImage
-							src='../images/stockimg.jpg'
+							src='../images/future.jpg'
 							alt='hero 2'
 							layout='fullWidth'
 						/>
 					</div>
-					<div className={heroStyles.heroSlideBox}>
+					{/* <div className={heroStyles.heroSlideBox}>
 						<p>
 							Aute reprehenderit nulla consectetur ipsum. Esse fugiat ad magna
 							eu adipisicing est excepteur sit magna qui. Amet ut laboris sunt
@@ -85,17 +76,17 @@ const Hero: React.FC = () => {
 							non proident do sunt. Culpa qui id commodo do laborum proident
 							aliquip.
 						</p>
-					</div>
+					</div> */}
 				</SwiperSlide>
 				<SwiperSlide className={heroStyles.heroSlide}>
 					<div className={heroStyles.heroImage}>
 						<StaticImage
-							src='../images/stockimg.jpg'
+							src='../images/jump.jpg'
 							alt='hero 3'
 							layout='fullWidth'
 						/>
 					</div>
-					<div className={heroStyles.heroSlideBox}>
+					{/* <div className={heroStyles.heroSlideBox}>
 						<p>
 							Aute reprehenderit nulla consectetur ipsum. Esse fugiat ad magna
 							eu adipisicing est excepteur sit magna qui. Amet ut laboris sunt
@@ -104,7 +95,7 @@ const Hero: React.FC = () => {
 							non proident do sunt. Culpa qui id commodo do laborum proident
 							aliquip.
 						</p>
-					</div>
+					</div> */}
 				</SwiperSlide>
 			</Swiper>
 			{/* <div className={heroStyles.heroBox}>yooo</div> */}

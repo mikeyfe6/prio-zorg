@@ -1,33 +1,58 @@
 @import '../configs/globals';
 
 .usp {
-	display: flex;
-	justify-content: space-evenly;
-	padding: 2em 1em;
-	gap: 1.5em 1em;
-	background: linear-gradient(
-		to left,
-		rgba($black, 0.0375),
-		$white,
-		rgba($black, 0.0375)
-	);
-	margin-bottom: 1em;
+	> h2 {
+		text-align: center;
+		margin-top: 2em;
+		display: flex;
+		align-items: center;
+		gap: 1em;
 
-	@include borderRadius;
+		&::before,
+		&::after {
+			content: '';
+			flex: 1;
+			height: 1px;
+		}
 
-	@include desktop {
-		justify-content: space-between;
-	}
+		&::before {
+			background: linear-gradient(to left, rgba($green, 1), $white);
+		}
 
-	@include laptop {
-		flex-wrap: wrap;
-	}
-
-	@include mobile {
-		flex-direction: column;
+		&::after {
+			background: linear-gradient(to right, rgba($green, 1), $white);
+		}
 	}
 
 	> div {
+		display: flex;
+		justify-content: space-evenly;
+		padding: 2em 1em;
+		gap: 1.5em 1em;
+		background: linear-gradient(
+			to left,
+			rgba($black, 0.0375),
+			$white,
+			rgba($black, 0.0375)
+		);
+		position: relative;
+
+		@include borderRadius;
+
+		@include desktop {
+			justify-content: space-between;
+		}
+
+		@include laptop {
+			flex-wrap: wrap;
+		}
+
+		@include mobile {
+			flex-direction: column;
+		}
+	}
+
+	&-button {
 		display: flex;
 		justify-content: center;
 
@@ -39,7 +64,7 @@
 			width: 100%;
 		}
 
-		> a {
+		> button {
 			display: flex;
 			align-items: center;
 			gap: 1em;
@@ -50,15 +75,19 @@
 			font-weight: 500;
 			font-size: large;
 
+			@include boxShadow(2);
+			@include borderRadius;
+			@include smoothTrans(transform);
+
+			@include laptop {
+				padding: 1.5em;
+			}
+
 			> i {
 				font-size: 2em;
 				color: $green;
 				min-width: 40px;
 			}
-
-			@include boxShadow(2);
-			@include borderRadius;
-			@include smoothTrans(transform);
 
 			&:hover {
 				transform: translateY(-0.25em);
@@ -71,9 +100,40 @@
 					rgba($green, 0.01)
 				);
 			}
+		}
+	}
 
-			@include laptop {
-				padding: 1.5em;
+	&-overlay {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		// background: rgba($white, 0.95);
+		background: linear-gradient(
+			to right,
+			rgba($white, 0.975),
+			rgba($green, 0.95)
+		);
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		gap: 2em;
+		padding: 2em;
+		outline: 1px solid $green;
+
+		@include borderRadius;
+		@include boxShadow;
+
+		@include phablet {
+			flex-direction: column;
+		}
+
+		button {
+			@include button(2);
+
+			@include phablet {
+				align-self: flex-end;
 			}
 		}
 	}

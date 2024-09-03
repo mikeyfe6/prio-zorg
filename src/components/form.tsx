@@ -6,25 +6,30 @@ const Form: React.FC = () => {
 	return (
 		<div className={formStyles.form}>
 			<div>
-				<h3>Dit is intro tekst betreft de contactformulier</h3>
-				<p>
-					Est amet laboris et ad mollit officia commodo qui duis esse qui
-					exercitation in excepteur. Culpa sunt sit exercitation laboris
-					occaecat non cupidatat sint dolore ullamco ut fugiat culpa. Deserunt
-					exercitation sint sint irure aute aute pariatur aliqua.
-				</p>
-				<p>
-					Est amet laboris et ad mollit officia commodo qui duis esse qui
-					exercitation in excepteur. Culpa sunt sit exercitation laboris
-					occaecat non cupidatat sint dolore ullamco ut fugiat culpa. Deserunt
-					exercitation sint sint irure aute aute pariatur aliqua.
-				</p>
-				<p>
-					Est amet laboris et ad mollit officia commodo qui duis esse qui
-					exercitation in excepteur. Culpa sunt sit exercitation laboris
-					occaecat non cupidatat sint dolore ullamco ut fugiat culpa. Deserunt
-					exercitation sint sint irure aute aute pariatur aliqua.
-				</p>
+				<h3>Neem contact met ons op</h3>
+
+				<ul>
+					<li>Prio Zorg</li>
+					<li>Sleewijkstraat 54</li>
+					<li>1104 TW Amsterdam</li>
+					<li>
+						<span>Telefoon:</span>{' '}
+						<a href='tel:31612345678'>+31 (0) 612 345 678</a>
+					</li>
+					<li>
+						<span>Emailadres:</span>{' '}
+						<a href='mailto:priozorg@test.nl'>priozorg@test.nl</a>
+					</li>
+					<li>
+						<span>KVK:</span> 84381000
+					</li>
+					<li>
+						<span>BTW:</span> NL003955140B97
+					</li>
+					<li>
+						<span>IBAN:</span> NL47KNAB0418057419
+					</li>
+				</ul>
 			</div>
 			<form
 				name='priozorg-netlifyform'

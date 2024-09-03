@@ -11,33 +11,21 @@ const AboutPage: React.FC<PageProps> = () => {
 	return (
 		<Layout>
 			<h2>Over ons</h2>
-
 			<p>
-				Priozorg is ontstaan uit een dringende behoefte om jongvolwassenen te
-				helpen die vastlopen en de regie over hun leven kwijt zijn. De oprichter
-				van Priozorg zag hoe veel jongeren worstelden met complexe uitdagingen
-				en besloot een organisatie op te richten die hen kon ondersteunen in hun
-				zoektocht naar stabiliteit en zelfredzaamheid.
+				Ik ben Clyde en ik werk al lange tijd in de hulpverlening, waar ik met
+				diverse doelgroepen heb gewerkt, zowel op groepsniveau als ambulant, met
+				een sterke focus op het laatste. Mijn gedrevenheid en vermogen om de
+				taal van de cliënt te verstaan, maken dat ik effectief kan communiceren
+				en verbinden.
 			</p>
 			<p>
-				Met een duidelijk doel voor ogen, begon Priozorg een breed scala aan
-				diensten aan te bieden, waaronder begeleiding, coaching, mentoring,
-				(opvoed)ondersteuning en bemiddeling. Deze diensten richten zich niet
-				alleen op jongvolwassenen, maar ook op hun gezinnen, waarbij de nadruk
-				ligt op een holistische benadering van zorg en ondersteuning.
-			</p>
-			<p>
-				Vanaf het begin heeft Priozorg kwaliteit als kernwaarde omarmd. De
-				organisatie streeft ernaar om door middel van een professionele en op
-				maat gemaakte aanpak de best mogelijke ondersteuning te bieden. Dit
-				blijkt uit de inzet van een toegewijd team van experts, die allemaal
-				dezelfde passie delen: jongvolwassenen helpen om weer op weg te komen en
-				een betekenisvol leven op te bouwen.
-			</p>
-
-			<p>
-				Priozorg streeft ernaar die aanvulling in de hulpverleningssector te
-				zijn, waar bij kwaliteit en persoonlijke aandacht altijd voorop staat.
+				Daarnaast ben ik cultuursensitief en empathisch, wat mij helpt om de
+				context en gevoelens van mijn cliënten beter te begrijpen. Mijn
+				analytische vaardigheden stellen mij in staat om snel te identificeren
+				waar cliënten of processen vastlopen. De laatste jaren richt mijn
+				begeleiding zich vooral op jongeren en hun ouders, waarbij ik hen
+				ondersteun in hun groeiproces en help bij het overwinnen van obstakels.
+				Hoe groot of hoe klein deze ook zijn.
 			</p>
 		</Layout>
 	);

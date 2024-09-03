@@ -15,15 +15,9 @@
 	--swiper-navigation-sides-offset: 0px !important;
 }
 
-.prio-zorg {
-	display: flex;
-	flex-direction: column;
-	min-height: 100vh;
-	margin: 0;
-}
-
 body {
 	font-family: 'Poppins', sans-serif;
+	letter-spacing: 0.25px;
 
 	@include container;
 
@@ -34,15 +28,22 @@ body {
 
 main {
 	flex: 1;
-	padding: 1.5em 0 2em;
+	padding: 3em 0;
 
 	p {
 		font-size: 1.125rem;
-		letter-spacing: 0.25px;
 		max-width: 80ch;
 
 		&:not(:last-of-type) {
 			margin-bottom: 1em;
+		}
+	}
+
+	ul > li {
+		font-size: 1.125rem;
+
+		&:not(:last-of-type) {
+			margin-bottom: 0.5em;
 		}
 	}
 }
@@ -80,12 +81,22 @@ a:not(#usp a, #footer-socials a, #footer-logo a, #footer-bottombar a) {
 }
 
 .prio {
+	&-zorg {
+		display: flex;
+		flex-direction: column;
+		min-height: 100vh;
+		margin: 0;
+	}
+
 	&-intro {
-		line-height: 27.5px;
+		line-height: 28.5px;
+		font-size: larger;
 	}
 
 	&-title {
-		@extend h2;
+		@extend h1;
+
+		padding-right: 0.1em;
 	}
 }
 
@@ -150,6 +161,10 @@ h4,
 h5,
 h6 {
 	margin-bottom: 0.5em;
+}
+
+button {
+	cursor: pointer;
 }
 
 footer {
