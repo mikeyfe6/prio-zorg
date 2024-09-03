@@ -41,6 +41,7 @@
 					background: rgba($green, 0.375);
 					color: white;
 					padding: 1em 1.5em 2em 1.5em;
+					width: 100%;
 
 					@include borderRadius(0);
 				}
