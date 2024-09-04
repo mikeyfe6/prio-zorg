@@ -7,11 +7,11 @@ require('dotenv').config({
 
 const siteMetadata = {
 	title: `Prio Zorg`,
-	slogan: ``,
-	description: `Priozorg is een dynamische hulpverleningsorganisatie die jongeren ondersteunt op weg naar zelfredzaamheid en betekenisvol leven. Wanneer jongvolwassenen vastlopen en de regie over hun leven kwijt zijn, staat Priozorg klaar met deskundige begeleiding, coaching, mentoring en (opvoed)ondersteuning.`,
+	slogan: `Waar goede zorg voorrang heeft`,
+	description: `Prio Zorg is een dynamische hulpverleningsorganisatie die jongeren ondersteunt op weg naar zelfredzaamheid en betekenisvol leven. Wanneer jongvolwassenen vastlopen en de regie over hun leven kwijt zijn, staat Prio Zorg klaar met deskundige begeleiding, coaching, mentoring en (opvoed)ondersteuning.`,
 
 	siteUrl: `https://prio-zorg.nl`,
-	image: `/images/logo/pz-logo.jpg`,
+	image: `/pz-logo.jpg`,
 
 	twitterUsername: ``,
 	facebookUrl: ``,

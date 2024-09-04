@@ -77,10 +77,6 @@
 	@include boxShadow(1);
 	@include smoothTrans;
 
-	@include mobile {
-		font-size: 0.9rem;
-	}
-
 	@if $type == 1 {
 		&:hover {
 			background: rgba($green, 0.5);
@@ -101,5 +97,9 @@
 			background: darken($green, 5%);
 			color: $white;
 		}
+	}
+
+	@include mobile {
+		font-size: 0.9rem;
 	}
 }

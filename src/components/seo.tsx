@@ -6,6 +6,7 @@ interface SEOProps {
 	description?: string;
 	keywords?: string;
 	pathname?: string;
+	image?: string;
 	children?: ReactNode;
 }
 
@@ -14,12 +15,13 @@ export const Seo: React.FC<SEOProps> = ({
 	description,
 	keywords,
 	pathname,
+	image: featImage,
 	children,
 }: SEOProps) => {
 	const {
 		title: siteTitle,
 		description: defaultDescription,
-		image,
+		image: defaultImage,
 		siteUrl,
 		slogan,
 		twitterUsername,
@@ -28,7 +30,7 @@ export const Seo: React.FC<SEOProps> = ({
 	const seo = {
 		title: title ? `${title} · ${siteTitle}` : `${siteTitle} · ${slogan}`,
 		description: description ?? defaultDescription,
-		image: `${siteUrl}${image}`,
+		image: featImage ? `${siteUrl}${featImage}` : `${siteUrl}${defaultImage}`,
 		url: `${siteUrl}${pathname ?? ''}`,
 		twitterUsername,
 	};
