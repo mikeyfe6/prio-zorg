@@ -20,6 +20,14 @@
 			max-height: 250px;
 		}
 
+		@include compact {
+			max-height: 200px;
+		}
+
+		@include compact {
+			max-height: 175px;
+		}
+
 		#{$hero}-slide {
 			#{$hero}-image {
 				opacity: 0.95;
@@ -54,6 +62,14 @@
 				@include mobile {
 					padding: 1em 1em 2em 1em;
 					top: 6.5em;
+				}
+
+				@include compact {
+					top: 3.5em;
+				}
+
+				@include compact {
+					display: none;
 				}
 
 				> p {

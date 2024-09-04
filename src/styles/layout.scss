@@ -31,6 +31,10 @@ main {
 	flex: 1;
 	padding: 2.5em 0;
 
+	@include mobile {
+		padding: 2em 0 2.5em;
+	}
+
 	p {
 		font-size: 1.125rem;
 		max-width: 80ch;
