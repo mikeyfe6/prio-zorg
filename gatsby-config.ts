@@ -87,11 +87,19 @@ const config: GatsbyConfig = {
 				host: process.env.CONTENTFUL_HOST,
 			},
 		},
+		{
+			resolve: 'gatsby-plugin-canonical-urls',
+			options: {
+				siteUrl: 'https://prio-zorg.nl',
+			},
+		},
 		'gatsby-plugin-image',
 		'gatsby-plugin-sharp',
 		'gatsby-transformer-sharp',
 		'gatsby-plugin-sass',
+		'gatsby-plugin-robots-txt',
 		'gatsby-plugin-sitemap',
+		'gatsby-plugin-catch-links',
 		{
 			resolve: 'gatsby-plugin-manifest',
 			options: {
@@ -106,6 +114,7 @@ const config: GatsbyConfig = {
 			},
 			__key: 'images',
 		},
+		'gatsby-plugin-offline',
 	],
 };
 
