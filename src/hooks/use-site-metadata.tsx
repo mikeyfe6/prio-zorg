@@ -14,11 +14,10 @@ interface SiteMetadata {
 	linkedinUrl: string;
 	youtubeUrl: string;
 
-	telephoneSeda: string;
-	telephoneBpt: string;
-	phoneRawSeda: string;
-	phoneRawBpt: string;
+	phone: string;
+	phoneRaw: string;
 	mobile: string;
+	mobileRaw: string;
 
 	email: string;
 	address: string;
@@ -52,11 +51,10 @@ export const useSiteMetadata = (): SiteMetadata => {
 					linkedinUrl
 					youtubeUrl
 
-					telephoneSeda
-					telephoneBpt
-					phoneRawSeda
-					phoneRawBpt
+					phone
+					phoneRaw
 					mobile
+					mobileRaw
 
 					email
 					address
