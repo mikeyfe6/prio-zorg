@@ -50,8 +50,7 @@ const Hero: React.FC = () => {
 						/>
 					</div>
 					<div className={heroStyles.heroSlideBox}>
-						<h1>Maak kennis met Prio Zorg</h1>
-						<p>Samen op weg naar een zelfredzame en betekenisvolle toekomst</p>
+						<h1>Welkom bij Prio Zorg</h1>
 
 						<div className={heroStyles.heroSlideButtons}>
 							<Link to='/over-ons/'>Meer over ons</Link>

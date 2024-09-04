@@ -4,30 +4,31 @@
 	$hero: &;
 
 	#{$hero}-wrapper {
+		max-height: 550px;
+
 		@include borderRadius;
 
+		@include laptop {
+			max-height: 450px;
+		}
+
+		@include phablet {
+			max-height: 350px;
+		}
+
+		@include mobile {
+			max-height: 250px;
+		}
+
 		#{$hero}-slide {
-			max-height: 550px;
-
-			@include laptop {
-				max-height: 450px;
-			}
-
-			@include phablet {
-				max-height: 350px;
-			}
-
-			@include mobile {
-				max-height: 250px;
-			}
-
 			#{$hero}-image {
 				opacity: 0.95;
 			}
 
 			&-box {
 				position: absolute;
-				bottom: 2.5em;
+				top: 22em;
+
 				right: 0;
 				max-width: 600px;
 				padding: 1.5em;
@@ -36,7 +37,7 @@
 				@include borderRadius(0.25em 0 0 0.25em);
 
 				@include laptop {
-					bottom: 0;
+					top: 19em;
 					max-width: 100%;
 					background: rgba($green, 0.375);
 					color: white;
@@ -46,8 +47,13 @@
 					@include borderRadius(0);
 				}
 
+				@include phablet {
+					top: 12.5em;
+				}
+
 				@include mobile {
 					padding: 1em 1em 2em 1em;
+					top: 6.5em;
 				}
 
 				> p {

@@ -6,8 +6,6 @@ const Form: React.FC = () => {
 	return (
 		<div className={formStyles.form}>
 			<div>
-				<h3>Neem contact met ons op</h3>
-
 				<ul>
 					<li>Prio Zorg</li>
 					<li>Sleewijkstraat 54</li>

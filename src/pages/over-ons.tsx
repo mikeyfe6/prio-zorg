@@ -10,7 +10,7 @@ import Layout from '../components/layout';
 const AboutPage: React.FC<PageProps> = () => {
 	return (
 		<Layout>
-			<h2>Over ons</h2>
+			<h2>Over Prio Zorg</h2>
 			<p>
 				Ik ben Clyde en ik werk al lange tijd in de hulpverlening, waar ik met
 				diverse doelgroepen heb gewerkt, zowel op groepsniveau als ambulant, met

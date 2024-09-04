@@ -10,7 +10,7 @@ import Form from '../components/form';
 const ContactPage: React.FC<PageProps> = () => {
 	return (
 		<Layout>
-			<h2>Contact</h2>
+			<h2>Neem contact met ons op</h2>
 
 			<Form />
 		</Layout>
