@@ -36,7 +36,6 @@
 			&-box {
 				position: absolute;
 				top: 22em;
-
 				right: 0;
 				max-width: 600px;
 				padding: 1.5em;
@@ -45,30 +44,38 @@
 				@include borderRadius(0.25em 0 0 0.25em);
 
 				@include laptop {
-					top: 19em;
+					top: 16.5em;
+				}
+
+				@include tablet {
+					top: 18em;
 					max-width: 100%;
 					background: rgba($green, 0.375);
 					color: white;
-					padding: 1em 1.5em 2em 1.5em;
+					padding: 1em 1.5em 3em 1.5em;
 					width: 100%;
 
 					@include borderRadius(0);
 				}
 
 				@include phablet {
-					top: 12.5em;
+					top: 12em;
 				}
 
 				@include mobile {
 					padding: 1em 1em 2em 1em;
-					top: 6.5em;
+					top: 8em;
+
+					h1 {
+						font-size: x-large;
+					}
 				}
 
 				@include compact {
 					top: 3.5em;
 				}
 
-				@include compact {
+				@include mini {
 					display: none;
 				}
 

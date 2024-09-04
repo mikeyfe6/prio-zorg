@@ -34,6 +34,10 @@
 			var(--swiper-pagination-bullet-size, 10px)
 		) !important;
 
+		@include mobile {
+			display: none;
+		}
+
 		&:hover {
 			background: var(--swiper-pagination-bullet-inactive-color-hover);
 		}

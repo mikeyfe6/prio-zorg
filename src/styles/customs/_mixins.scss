@@ -59,6 +59,12 @@
 	}
 }
 
+@mixin ellipsis {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
 @mixin button($type: 1) {
 	padding: 0.5em 1em;
 	border-width: 1px;
@@ -66,6 +72,7 @@
 	border-color: rgba($black, 0.875);
 	cursor: pointer;
 
+	@include ellipsis;
 	@include borderRadius;
 	@include boxShadow(1);
 	@include smoothTrans;
