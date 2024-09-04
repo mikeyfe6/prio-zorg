@@ -1,10 +1,25 @@
 @import '../configs/globals';
 
 .header {
-	display: flex;
-	justify-content: space-between;
-	padding: 1em 0;
-	position: relative;
+	height: 92px;
+	margin-bottom: 2em;
+
+	@include fullWidth;
+
+	&-container {
+		position: fixed;
+		top: 0;
+		left: 50%;
+		transform: translateX(-50%);
+		display: flex;
+		justify-content: space-between;
+		background: $white;
+		z-index: 3;
+		border-bottom-right-radius: 1em;
+		border-bottom-left-radius: 1em;
+
+		@include container($paddingY: 1em, $mobPaddingY: 0.5em);
+	}
 
 	.logo {
 		width: 200px;
@@ -51,14 +66,13 @@
 	.mobile {
 		display: none;
 		position: absolute;
-		top: 105%;
+		top: 110%;
 		right: 1.75%;
-
-		color: $white;
 		width: 50%;
 		z-index: 2;
 		overflow: hidden;
-		border: 1px solid rgba($white, 1);
+		outline: 1px solid rgba($black, 1);
+		border: 10px solid rgba($green, 0.75);
 
 		@include borderRadius;
 
@@ -73,16 +87,23 @@
 			flex-direction: column;
 
 			li {
+				&:not(:last-of-type) {
+					border-bottom: 1px solid rgba($grey, 1);
+				}
+
 				a {
-					padding: 1em 1.5em;
+					padding: 1.25em 1.5em;
 					display: block;
-					background: rgba($green, 0.9);
+					background: rgba($white, 0.9);
+					font-weight: 500;
+					color: $black;
 
 					&.active {
-						background: rgba($green, 1);
+						background: rgba($white, 1);
 
 						&:before {
 							content: '>';
+							color: $green;
 							padding-right: 0.5em;
 						}
 					}

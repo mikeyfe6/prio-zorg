@@ -1,11 +1,17 @@
-@mixin container($maxWidth: 1400px, $paddingY: 0, $paddingX: 2em) {
+@mixin container(
+	$maxWidth: 1400px,
+	$paddingY: 0,
+	$paddingX: 2em,
+	$mobPaddingY: 0,
+	$mobPaddingX: 1.5em
+) {
 	max-width: $maxWidth;
 	margin: 0 auto;
 	padding: $paddingY $paddingX;
 	width: 100%;
 
 	@include mobile {
-		padding: 0 1.5em;
+		padding: $mobPaddingY $mobPaddingX;
 	}
 }
 

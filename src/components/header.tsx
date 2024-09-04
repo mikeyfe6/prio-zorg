@@ -28,53 +28,57 @@ const Header: React.FC = () => {
 
 	return (
 		<header className={headerStyles.header}>
-			<div className={headerStyles.logo}>
-				<Link to='/'>
-					{pzLogo && <GatsbyImage image={pzLogo} alt='PZ Logo' />}
-				</Link>
-			</div>
+			<div className={headerStyles.headerContainer}>
+				<div className={headerStyles.logo}>
+					<Link to='/'>
+						{pzLogo && <GatsbyImage image={pzLogo} alt='PZ Logo' />}
+					</Link>
+				</div>
 
-			<Hamburger isOpen={isOpen} toggleMenu={toggleMenu} />
+				<Hamburger isOpen={isOpen} toggleMenu={toggleMenu} />
 
-			<div className={headerStyles.menu}>
-				<ul>
-					<li>
-						<Link to='/' activeClassName={headerStyles.active}>
-							Home
-						</Link>
-					</li>
-					<li>
-						<Link to='/over-ons' activeClassName={headerStyles.active}>
-							Over Ons
-						</Link>
-					</li>
-					<li>
-						<Link to='/contact' activeClassName={headerStyles.active}>
-							Contact
-						</Link>
-					</li>
-				</ul>
-			</div>
+				<div className={headerStyles.menu}>
+					<ul>
+						<li>
+							<Link to='/' activeClassName={headerStyles.active}>
+								Home
+							</Link>
+						</li>
+						<li>
+							<Link to='/over-ons' activeClassName={headerStyles.active}>
+								Over Ons
+							</Link>
+						</li>
+						<li>
+							<Link to='/contact' activeClassName={headerStyles.active}>
+								Contact
+							</Link>
+						</li>
+					</ul>
+				</div>
 
-			<div
-				className={`${headerStyles.mobile} ${isOpen ? headerStyles.open : ''}`}>
-				<ul>
-					<li>
-						<Link to='/' activeClassName={headerStyles.active}>
-							Home
-						</Link>
-					</li>
-					<li>
-						<Link to='/over-ons' activeClassName={headerStyles.active}>
-							Over Ons
-						</Link>
-					</li>
-					<li>
-						<Link to='/contact' activeClassName={headerStyles.active}>
-							Contact
-						</Link>
-					</li>
-				</ul>
+				<div
+					className={`${headerStyles.mobile} ${
+						isOpen ? headerStyles.open : ''
+					}`}>
+					<ul>
+						<li>
+							<Link to='/' activeClassName={headerStyles.active}>
+								Home
+							</Link>
+						</li>
+						<li>
+							<Link to='/over-ons' activeClassName={headerStyles.active}>
+								Over Ons
+							</Link>
+						</li>
+						<li>
+							<Link to='/contact' activeClassName={headerStyles.active}>
+								Contact
+							</Link>
+						</li>
+					</ul>
+				</div>
 			</div>
 		</header>
 	);
