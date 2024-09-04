@@ -3,6 +3,8 @@ import React from 'react';
 import { graphql, useStaticQuery, Link } from 'gatsby';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 
+import { useSiteMetadata } from '../hooks/use-site-metadata';
+
 import * as footerStyles from '../styles/modules/footer.module.scss';
 
 const Footer: React.FC = () => {
@@ -18,30 +20,47 @@ const Footer: React.FC = () => {
 
 	const pzLogo = getImage(data.pzLogo.childImageSharp.gatsbyImageData);
 
+	const {
+		companyName,
+		address,
+		postalCode,
+		city,
+		phone,
+		phoneRaw,
+		email,
+		kvk,
+		btw,
+		bank,
+	} = useSiteMetadata();
+
+	const currentYear = new Date().getFullYear();
+
 	return (
 		<footer className={footerStyles.footer}>
 			<div className={footerStyles.footerTopBar}>
 				<div className={footerStyles.footerTopWrapper}>
 					<div className={footerStyles.list}>
-						<h6>Prio Zorg</h6>
+						<h6>{companyName}</h6>
 						<ul>
-							<li>Sleewijkstraat 54</li>
-							<li>1104 TW Amsterdam</li>
+							<li>{address}</li>
 							<li>
-								<a href='tel:31612345678'>
-									<i className='fa-solid fa-phone fa-lg' />
-									<span>+31 (0) 612 345 678</span>
-								</a>
+								{postalCode} {city}
 							</li>
+							{/* <li>
+								<a href={`tel:${phoneRaw}`}>
+									<i className='fa-solid fa-phone fa-lg' />
+									<span>{phone}</span>
+								</a>
+							</li> */}
 							<li>
 								<a href='mailto:priozorg@test.nl'>
 									<i className='fa-solid fa-envelope fa-lg' />
-									<span>priozorg@test.nl</span>
+									<span>{email}</span>
 								</a>
 							</li>
-							<li>KVK: 84381000</li>
-							<li>BTW: NL003955140B97</li>
-							<li>IBAN: NL47KNAB0418057419</li>
+							<li>KVK: {kvk}</li>
+							<li>BTW: {btw}</li>
+							<li>IBAN: {bank}</li>
 						</ul>
 					</div>
 
@@ -93,7 +112,7 @@ const Footer: React.FC = () => {
 			<div className={footerStyles.footerBottomBar} id='footer-bottombar'>
 				<div className={footerStyles.footerBottomWrapper}>
 					<div>
-						<b>©</b> 2024 · Prio Zorg
+						<b>©</b> {currentYear} · {companyName}
 					</div>
 					<div>
 						Powered by{' '}

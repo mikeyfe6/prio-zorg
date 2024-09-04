@@ -1,31 +1,46 @@
 import React from 'react';
 
+import { useSiteMetadata } from '../hooks/use-site-metadata';
+
 import * as formStyles from '../styles/modules/form.module.scss';
 
 const Form: React.FC = () => {
+	const {
+		companyName,
+		address,
+		postalCode,
+		city,
+		phone,
+		phoneRaw,
+		email,
+		kvk,
+		btw,
+		bank,
+	} = useSiteMetadata();
+
 	return (
 		<div className={formStyles.form}>
 			<div>
 				<ul>
-					<li>Prio Zorg</li>
-					<li>Sleewijkstraat 54</li>
-					<li>1104 TW Amsterdam</li>
+					<li>{companyName}</li>
+					<li>{address}</li>
 					<li>
-						<span>Telefoon:</span>{' '}
-						<a href='tel:31612345678'>+31 (0) 612 345 678</a>
+						{postalCode} {city}
+					</li>
+					{/* <li>
+						<span>Telefoon:</span> <a href={`tel:${phoneRaw}`}>{phone}</a>
+					</li> */}
+					<li>
+						<span>Emailadres:</span> <a href='{`mailto:${email}`}'>{email}</a>
 					</li>
 					<li>
-						<span>Emailadres:</span>{' '}
-						<a href='mailto:priozorg@test.nl'>priozorg@test.nl</a>
+						<span>KVK:</span> {kvk}
 					</li>
 					<li>
-						<span>KVK:</span> 84381000
+						<span>BTW:</span> {btw}
 					</li>
 					<li>
-						<span>BTW:</span> NL003955140B97
-					</li>
-					<li>
-						<span>IBAN:</span> NL47KNAB0418057419
+						<span>IBAN:</span> {bank}
 					</li>
 				</ul>
 			</div>
@@ -55,7 +70,7 @@ const Form: React.FC = () => {
 					<input type='tel' name='phone' id='formPhoneNr' />
 				</div>
 				<div>
-					<label htmlFor='formEmail'>Emailadress</label>
+					<label htmlFor='formEmail'>Emailadres</label>
 					<input type='email' name='email' id='formEmail' />
 				</div>
 				<div>
