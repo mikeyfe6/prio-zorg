@@ -21,11 +21,11 @@
 		}
 
 		@include compact {
-			max-height: 200px;
+			max-height: 187.5px;
 		}
 
-		@include compact {
-			max-height: 175px;
+		@include mini {
+			max-height: 150px;
 		}
 
 		#{$hero}-slide {
@@ -72,7 +72,7 @@
 				}
 
 				@include compact {
-					top: 3.5em;
+					top: 4.25em;
 				}
 
 				@include mini {
