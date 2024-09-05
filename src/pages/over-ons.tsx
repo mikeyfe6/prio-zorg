@@ -12,7 +12,12 @@ const AboutPage: React.FC<PageProps> = () => {
 		<Layout>
 			<h2>Over Prio Zorg</h2>
 			<p>
-				Ik ben Clyde en heb sinds 2003 de hulpverlening als vakgebied, waar ik met diverse doelgroepen en op verschillende niveau's heb gewerkt. Hierbij is we in de loop van tijd een sterke nadruk op ambulante persoonlijke begeleiding komen te liggen.
+				Ik ben Clyde en heb sinds 2003 de hulpverlening als vakgebied, waar ik
+				met diverse doelgroepen en op verschillende niveau's heb gewerkt.
+				Hierbij is we in de loop van tijd een sterke nadruk op ambulante
+				persoonlijke begeleiding komen te liggen. Mijn gedrevenheid en vermogen
+				om de taal van de cliënt te verstaan, maken dat ik effectief kan
+				communiceren en verbinden.
 			</p>
 			<p>
 				Daarnaast ben ik cultuursensitief en empathisch, wat mij helpt om de
