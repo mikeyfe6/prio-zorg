@@ -53,7 +53,7 @@ const Footer: React.FC = () => {
 								</a>
 							</li> */}
 							<li>
-								<a href='mailto:priozorg@test.nl'>
+								<a href={`mailto:${email}`}>
 									<i className='fa-solid fa-envelope fa-lg' />
 									<span>{email}</span>
 								</a>
