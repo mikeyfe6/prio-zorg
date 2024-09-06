@@ -31,7 +31,7 @@ const Form: React.FC = () => {
 						<span>Telefoon:</span> <a href={`tel:${phoneRaw}`}>{phone}</a>
 					</li> */}
 					<li>
-						<span>E-mailadres:</span> <a href='{`mailto:${email}`}'>{email}</a>
+						<span>E-mailadres:</span> <a href={`mailto:${email}`}>{email}</a>
 					</li>
 					<li>
 						<span>KVK:</span> {kvk}
