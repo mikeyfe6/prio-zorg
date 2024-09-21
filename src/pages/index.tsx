@@ -13,15 +13,15 @@ const IndexPage: React.FC<PageProps> = () => {
 	return (
 		<Layout>
 			<p className='prio-intro'>
-				<span className='prio-title'>Priozorg</span> is een dynamische
+				<span className='prio-title'>Prio Zorg</span> is een dynamische
 				hulpverleningsorganisatie die jongeren ondersteunt op weg naar
 				zelfredzaamheid en betekenisvol leven. Wanneer jongvolwassenen vastlopen
-				en de regie over hun leven kwijt zijn, staat Priozorg klaar met
+				en de regie over hun leven kwijt zijn, staat Prio Zorg klaar met
 				deskundige begeleiding, coaching, mentoring en (opvoed)ondersteuning.
 				<br />
 				<br />
-				Met gepaste interventies zet Priozorg de jongeren weer in hun kracht en
-				verliest hierbij het bijbehorend gezin niet uit het oog. Bij Priozorg
+				Met gepaste interventies zet Prio Zorg de jongeren weer in hun kracht en
+				verliest hierbij het bijbehorend gezin niet uit het oog. Bij Prio Zorg
 				geloven we dat met een integrale aanpak iedereen weer met vertrouwen en
 				veerkracht de toekomst kan treden.
 			</p>
