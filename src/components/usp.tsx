@@ -46,7 +46,7 @@ const Usp: React.FC = () => {
 			iconClass: 'fa-solid fa-hand-holding-medical',
 		},
 		{
-			name: 'Bemiddeling',
+			name: '(Scheidings)bemiddeling',
 			description:
 				'Een pragmatische en neutrale (cultuursensitieve) oplossing bij een (echt) scheiding of (familie) conflict nodig?',
 			iconClass: 'fa-solid fa-user-doctor',
