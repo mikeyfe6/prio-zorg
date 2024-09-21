@@ -15,7 +15,7 @@ const IndexPage: React.FC<PageProps> = () => {
 			<p className='prio-intro'>
 				<span className='prio-title'>Prio Zorg</span> is een dynamische
 				hulpverleningsorganisatie die jongeren ondersteunt op weg naar
-				zelfredzaamheid en betekenisvol leven. Wanneer jongvolwassenen vastlopen
+				zelfredzaamheid en een betekenisvol leven. Wanneer jongvolwassenen vastlopen
 				en de regie over hun leven kwijt zijn, staat Prio Zorg klaar met
 				deskundige begeleiding, coaching, mentoring en (opvoed)ondersteuning.
 				<br />
