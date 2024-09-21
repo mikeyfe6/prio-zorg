@@ -70,7 +70,7 @@ const Form: React.FC = () => {
 					<input type='tel' name='phone' id='formPhoneNr' />
 				</div>
 				<div>
-					<label htmlFor='formEmail'>Emailadres</label>
+					<label htmlFor='formEmail'>E-mailadres</label>
 					<input type='email' name='email' id='formEmail' />
 				</div>
 				<div>
