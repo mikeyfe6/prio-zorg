@@ -40,10 +40,6 @@
 		@include borderRadius;
 
 		@include desktop {
-			justify-content: space-between;
-		}
-
-		@include laptop {
 			flex-wrap: wrap;
 		}
 
@@ -56,7 +52,7 @@
 		display: flex;
 		justify-content: center;
 
-		@include laptop {
+		@include desktop {
 			width: calc(49% - 1em);
 		}
 
@@ -89,6 +85,10 @@
 				min-width: 40px;
 			}
 
+			> span {
+				@include ellipsis;
+			}
+
 			&:hover {
 				transform: translateY(-0.25em);
 				outline: 1px solid $green;
@@ -109,12 +109,8 @@
 		left: 0;
 		width: 100%;
 		height: 100%;
-		// background: rgba($white, 0.95);
-		background: linear-gradient(
-			to right,
-			rgba($white, 0.975),
-			rgba($green, 0.95)
-		);
+		background-size: cover;
+		background-position: center;
 		display: flex;
 		justify-content: center;
 		align-items: center;
@@ -127,6 +123,43 @@
 
 		@include phablet {
 			flex-direction: column;
+		}
+
+		&-coaching {
+			background: linear-gradient(
+					to left,
+					rgba($white, 0.675),
+					rgba($green, 0.65)
+				),
+				url('../../images/usp/coaching.jpg') no-repeat center 25% / cover;
+		}
+
+		&-mentoring {
+			background: linear-gradient(
+					to left,
+					rgba($white, 0.675),
+					rgba($green, 0.65)
+				),
+				url('../../images/usp/mentoring.avif') no-repeat center 25% / cover;
+		}
+
+		&-opvoedondersteuning {
+			background: linear-gradient(
+					to left,
+					rgba($white, 0.675),
+					rgba($green, 0.65)
+				),
+				url('../../images/usp/opvoedondersteuning.jpg') no-repeat center 50% /
+					cover;
+		}
+
+		&-bemiddeling {
+			background: linear-gradient(
+					to left,
+					rgba($white, 0.675),
+					rgba($green, 0.65)
+				),
+				url('../../images/usp/bemiddeling.jpg') no-repeat center 62.5% / cover;
 		}
 
 		button {
