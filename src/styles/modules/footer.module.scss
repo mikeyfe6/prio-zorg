@@ -95,6 +95,10 @@
 			.logo {
 				width: 250px;
 
+				@include tooSmall {
+					width: -webkit-fill-available;
+				}
+
 				img {
 					overflow: hidden;
 

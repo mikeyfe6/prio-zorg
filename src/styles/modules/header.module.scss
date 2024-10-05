@@ -13,12 +13,13 @@
 		transform: translateX(-50%);
 		display: flex;
 		justify-content: space-between;
+		gap: 1em;
 		background: $white;
 		z-index: 3;
 		border-bottom-right-radius: 0.5em;
 		border-bottom-left-radius: 0.5em;
 
-		@include container($paddingY: 1em, $mobPaddingY: 0.5em);
+		@include container($paddingY: 1em, $mobPaddingY: 0.5em, $type: 2);
 	}
 
 	.logo {

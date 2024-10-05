@@ -5,7 +5,8 @@
 	$paddingY: 0,
 	$paddingX: 2em,
 	$mobPaddingY: 0,
-	$mobPaddingX: 1.5em
+	$mobPaddingX: 1.5em,
+	$type: 1
 ) {
 	max-width: $maxWidth;
 	margin: 0 auto;
@@ -14,6 +15,14 @@
 
 	@include mobile {
 		padding: $mobPaddingY $mobPaddingX;
+	}
+
+	@include tooSmall {
+		@if $type == 1 {
+			width: -webkit-fill-available;
+		} @else if $type == 2 {
+			min-width: 320px;
+		}
 	}
 }
 
@@ -38,6 +47,13 @@
 	right: 50%;
 	margin-left: -50vw;
 	margin-right: -50vw;
+
+	@include tooSmall {
+		position: static;
+		margin-left: 0;
+		margin-right: 0;
+		width: -webkit-fill-available;
+	}
 }
 
 @mixin borderRadius($radius: 0.25em) {

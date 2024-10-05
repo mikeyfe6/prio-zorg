@@ -1,4 +1,4 @@
-@mixin toosmall {
+@mixin tooSmall {
 	@media only screen and (width <= 20em) {
 		@content;
 	}

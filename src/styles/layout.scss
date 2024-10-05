@@ -15,16 +15,17 @@
 	--swiper-navigation-sides-offset: 0px !important;
 }
 
+html,
+body {
+	min-width: 320px;
+}
+
 body {
 	font-family: 'Poppins', sans-serif;
 	letter-spacing: 0.25px;
 	background: linear-gradient(90deg, rgba($green, 0.05), $white);
 
 	@include container;
-
-	@include toosmall {
-		display: none;
-	}
 }
 
 main {

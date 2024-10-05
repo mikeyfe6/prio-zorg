@@ -3,6 +3,14 @@
 .hero {
 	$hero: &;
 
+	@include mobile {
+		@include fullWidth;
+	}
+
+	@include tooSmall {
+		display: none;
+	}
+
 	#{$hero}-wrapper {
 		max-height: 550px;
 
@@ -17,15 +25,16 @@
 		}
 
 		@include mobile {
-			max-height: 250px;
+			max-height: 275px;
+			border-radius: 0;
 		}
 
 		@include compact {
-			max-height: 187.5px;
+			max-height: 237.5px;
 		}
 
 		@include mini {
-			max-height: 150px;
+			max-height: 175px;
 		}
 
 		#{$hero}-slide {
@@ -64,7 +73,7 @@
 
 				@include mobile {
 					padding: 1em 1em 2em 1em;
-					top: 8em;
+					top: 9.5em;
 
 					h1 {
 						font-size: x-large;
@@ -72,7 +81,7 @@
 				}
 
 				@include compact {
-					top: 4.25em;
+					top: 7.25em;
 				}
 
 				@include mini {
