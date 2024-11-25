@@ -20,9 +20,9 @@ import 'swiper/scss/parallax';
 import 'swiper/scss/autoplay';
 import 'swiper/scss/a11y';
 
-import '../styles/swiper.scss';
-
 import * as heroStyles from '../styles/modules/hero.module.scss';
+
+// TODO: toon/hide hero button op basis van pagina
 
 const Hero: React.FC = () => {
 	return (

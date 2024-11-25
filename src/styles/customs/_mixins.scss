@@ -1,5 +1,8 @@
 @use 'sass:color';
 
+@use 'colors' as *;
+@use 'mediaqueries' as *;
+
 @mixin container(
 	$maxWidth: 1400px,
 	$paddingY: 0,
