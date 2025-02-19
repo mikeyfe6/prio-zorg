@@ -13,6 +13,8 @@ interface OverlayProps {
 	onClose: () => void;
 }
 
+// TODO: refactoren van overlay image; ipv ::after de image in gatsbyImage zetten
+
 const Overlay: React.FC<OverlayProps> = ({ item, onClose }) => {
 	const overlayClass = `${uspStyles.uspOverlay} ${uspStyles[item.bgClass]}`;
 

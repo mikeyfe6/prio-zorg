@@ -8,7 +8,7 @@
     "gatsby"
   ],
   "scripts": {
-    "develop": "gatsby clean && yarn cache clean && gatsby develop -H 0.0.0.0 --open",
+    "develop": "gatsby develop -H 0.0.0.0 --open",
     "start": "gatsby develop",
     "build": "gatsby build",
     "serve": "gatsby serve",
@@ -17,7 +17,7 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "gatsby": "^5.14.0",
+    "gatsby": "^5.14.1",
     "gatsby-plugin-canonical-urls": "^5.14.0",
     "gatsby-plugin-catch-links": "^5.14.0",
     "gatsby-plugin-google-tagmanager": "^5.14.0",
@@ -28,18 +28,18 @@
     "gatsby-plugin-sass": "^6.14.0",
     "gatsby-plugin-sharp": "^5.14.0",
     "gatsby-plugin-sitemap": "^6.14.0",
-    "gatsby-source-contentful": "^8.14.0",
+    "gatsby-source-contentful": "^8.15.0",
     "gatsby-source-filesystem": "^5.14.0",
     "gatsby-transformer-sharp": "^5.14.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "sass": "^1.81.0",
-    "swiper": "^11.1.15"
+    "sass": "^1.85.0",
+    "swiper": "^11.2.4"
   },
   "devDependencies": {
-    "@types/node": "^22.9.3",
-    "@types/react": "^18.3.12",
-    "@types/react-dom": "^18.3.1",
-    "typescript": "^5.7.2"
+    "@types/node": "^22.13.4",
+    "@types/react": "^19.0.10",
+    "@types/react-dom": "^19.0.4",
+    "typescript": "^5.7.3"
   }
 }
