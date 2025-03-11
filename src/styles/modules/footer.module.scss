@@ -1,144 +1,141 @@
-@use '../customs' as *;
+@use "../customs" as *;
 
 .footer {
-	$this: &;
+    $this: &;
 
-	display: flex;
-	flex-direction: column;
+    display: flex;
+    flex-direction: column;
 
-	&-top-bar {
-		background: linear-gradient(90deg, rgba($black, 0.075), $white);
-		width: 100%;
+    &-top-bar {
+        background: linear-gradient(90deg, rgba($black, 0.075), $white);
+        width: 100%;
 
-		@include fullWidth;
+        @include fullWidth;
 
-		#{$this}-top-wrapper {
-			display: grid;
-			grid-template-columns: repeat(4, 1fr);
-			gap: 3em 1.5em;
+        #{$this}-top-wrapper {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 3em 1.5em;
 
-			@include container($paddingY: 2em);
+            @include container($paddingY: 2em);
 
-			@include laptop {
-				grid-template-columns: repeat(2, 1fr);
-			}
+            @include laptop {
+                grid-template-columns: repeat(2, 1fr);
+            }
 
-			@include tablet {
-				padding-top: 2.5em;
-				padding-bottom: 2.5em;
-			}
+            @include tablet {
+                padding-top: 2.5em;
+                padding-bottom: 2.5em;
+            }
 
-			@include mobile {
-				grid-template-columns: 1fr;
-				gap: 2em;
-			}
+            @include mobile {
+                grid-template-columns: 1fr;
+                gap: 2em;
+            }
 
-			.socials {
-				h6 {
-					margin-bottom: 0.75em;
-				}
+            .socials {
+                h6 {
+                    margin-bottom: 0.75em;
+                }
 
-				ul {
-					display: flex;
-					gap: 1em;
+                ul {
+                    display: flex;
+                    gap: 1em;
 
-					li {
-						a {
-							color: $black;
-							font-size: 1.875em;
+                    li {
+                        a {
+                            color: $black;
+                            font-size: 1.875em;
 
-							&:hover {
-								opacity: 0.75;
-							}
-						}
-					}
-				}
-			}
+                            &:hover {
+                                opacity: 0.75;
+                            }
+                        }
+                    }
+                }
+            }
 
-			.list {
-				@extend .general;
+            .list {
+                @extend .general;
 
-				ul {
-					li {
-						&:nth-of-type(3) {
-							margin-top: 1em;
-						}
+                ul {
+                    li {
+                        &:nth-of-type(3) {
+                            margin-top: 1em;
+                            margin-bottom: 1em;
+                        }
+                    }
+                }
+            }
 
-						&:nth-of-type(4) {
-							margin-bottom: 1em;
-						}
-					}
-				}
-			}
+            .general {
+                h6 {
+                    margin-bottom: 0.75em;
+                }
 
-			.general {
-				h6 {
-					margin-bottom: 0.75em;
-				}
+                ul {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 0.5em;
 
-				ul {
-					display: flex;
-					flex-direction: column;
-					gap: 0.5em;
+                    li {
+                        a {
+                            i {
+                                margin-right: 0.5em;
+                                color: $black;
+                            }
+                        }
+                    }
+                }
+            }
 
-					li {
-						a {
-							i {
-								margin-right: 0.5em;
-								color: $black;
-							}
-						}
-					}
-				}
-			}
+            .logo {
+                width: 250px;
 
-			.logo {
-				width: 250px;
+                @include tooSmall {
+                    width: -webkit-fill-available;
+                }
 
-				@include tooSmall {
-					width: -webkit-fill-available;
-				}
+                img {
+                    overflow: hidden;
 
-				img {
-					overflow: hidden;
+                    @include borderRadius;
+                }
+            }
+        }
+    }
 
-					@include borderRadius;
-				}
-			}
-		}
-	}
+    &-bottom-bar {
+        background: rgba($green, 0.5);
 
-	&-bottom-bar {
-		background: rgba($green, 0.5);
+        @include fullWidth;
 
-		@include fullWidth;
+        #{$this}-bottom-wrapper {
+            display: flex;
+            justify-content: space-between;
 
-		#{$this}-bottom-wrapper {
-			display: flex;
-			justify-content: space-between;
+            @include container;
 
-			@include container;
+            @include mobile {
+                padding: 0 1.5em;
+            }
 
-			@include mobile {
-				padding: 0 1.5em;
-			}
+            > div {
+                text-align: center;
+                font-size: small;
+                padding: 0.75em 0;
 
-			> div {
-				text-align: center;
-				font-size: small;
-				padding: 0.75em 0;
+                a {
+                    font-weight: 600;
 
-				a {
-					font-weight: 600;
-
-					&:hover {
-						text-decoration: underline;
-						text-decoration-thickness: 1px;
-						text-underline-offset: 0.25em;
-						text-decoration-color: $white;
-					}
-				}
-			}
-		}
-	}
+                    &:hover {
+                        text-decoration: underline;
+                        text-decoration-thickness: 1px;
+                        text-underline-offset: 0.25em;
+                        text-decoration-color: $white;
+                    }
+                }
+            }
+        }
+    }
 }
