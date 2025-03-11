@@ -1,115 +1,119 @@
-@use '../customs' as *;
+@use "../customs" as *;
 
 .header {
-	height: 92px;
-	margin-bottom: 2em;
+    height: rem-calc(92);
+    margin-bottom: rem-calc(32);
 
-	@include fullWidth;
+    @include fullWidth;
 
-	&-container {
-		position: fixed;
-		top: 0;
-		left: 50%;
-		transform: translateX(-50%);
-		display: flex;
-		justify-content: space-between;
-		gap: 1em;
-		background: $white;
-		z-index: 3;
-		border-bottom-right-radius: 0.5em;
-		border-bottom-left-radius: 0.5em;
+    &-container {
+        position: fixed;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        justify-content: space-between;
+        gap: rem-calc(16);
+        background: $white;
+        z-index: 3;
+        border-bottom-right-radius: rem-calc(8);
+        border-bottom-left-radius: rem-calc(8);
 
-		@include container($paddingY: 1em, $mobPaddingY: 0.5em, $type: 2);
-	}
+        @include container(
+            $paddingY: rem-calc(16),
+            $mobPaddingY: rem-calc(8),
+            $type: 2
+        );
+    }
 
-	.logo {
-		width: 200px;
-	}
+    .logo {
+        width: rem-calc(200);
+    }
 
-	.menu {
-		display: flex;
-		align-items: center;
+    .menu {
+        display: flex;
+        align-items: center;
 
-		@include mobile {
-			display: none;
-		}
+        @include mobile {
+            display: none;
+        }
 
-		ul {
-			display: flex;
-			justify-content: space-between;
-			align-items: center;
-			border: 1px solid rgba($black, 1);
+        ul {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border: 1px solid rgba($black, 1);
 
-			min-height: 40px;
-			overflow: hidden;
+            min-height: rem-calc(40);
+            overflow: hidden;
 
-			@include borderRadius;
-			@include boxShadow(1);
+            @include borderRadius;
+            @include boxShadow(1);
 
-			li {
-				a {
-					padding: 0.75em 1em;
+            li {
+                a {
+                    padding: rem-calc(12 16);
 
-					@include smoothTrans;
+                    @include smoothTrans;
 
-					&.active {
-						background: rgba($green, 0.375);
-					}
+                    &.active {
+                        background: rgba($green, 0.375);
+                    }
 
-					&:hover {
-						background: rgba($green, 0.625);
-					}
-				}
-			}
-		}
-	}
+                    &:hover {
+                        background: rgba($green, 0.625);
+                    }
+                }
+            }
+        }
+    }
 
-	.mobile {
-		display: none;
-		position: absolute;
-		top: 110%;
-		right: 1.75%;
-		width: 50%;
-		z-index: 2;
-		overflow: hidden;
-		outline: 1px solid rgba($black, 1);
-		border: 10px solid rgba($green, 0.75);
+    .mobile {
+        display: none;
+        position: absolute;
+        top: 110%;
+        right: 1.75%;
+        width: 50%;
+        z-index: 2;
+        overflow: hidden;
+        outline: 1px solid rgba($black, 1);
+        border: 10px solid rgba($green, 0.75);
 
-		@include borderRadius;
+        @include borderRadius;
 
-		@include mobile {
-			&.open {
-				display: block;
-			}
-		}
+        @include mobile {
+            &.open {
+                display: block;
+            }
+        }
 
-		ul {
-			display: flex;
-			flex-direction: column;
+        ul {
+            display: flex;
+            flex-direction: column;
 
-			li {
-				&:not(:last-of-type) {
-					border-bottom: 1px solid rgba($grey, 1);
-				}
+            li {
+                &:not(:last-of-type) {
+                    border-bottom: 1px solid rgba($grey, 1);
+                }
 
-				a {
-					padding: 1.25em 1.5em;
-					display: block;
-					background: rgba($white, 0.9);
-					font-weight: 500;
-					color: $black;
+                a {
+                    padding: rem-calc(20 24);
+                    display: block;
+                    background: rgba($white, 0.9);
+                    font-weight: 500;
+                    color: $black;
 
-					&.active {
-						background: rgba($white, 1);
+                    &.active {
+                        background: rgba($white, 1);
 
-						&:before {
-							content: '>';
-							color: $green;
-							padding-right: 0.5em;
-						}
-					}
-				}
-			}
-		}
-	}
+                        &:before {
+                            content: ">";
+                            color: $green;
+                            padding-right: rem-calc(8);
+                        }
+                    }
+                }
+            }
+        }
+    }
 }

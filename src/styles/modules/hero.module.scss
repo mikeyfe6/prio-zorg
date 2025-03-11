@@ -1,120 +1,120 @@
-@use '../customs' as *;
+@use "../customs" as *;
 
 .hero {
-	$hero: &;
+    $hero: &;
 
-	@include mobile {
-		@include fullWidth;
-	}
+    @include mobile {
+        @include fullWidth;
+    }
 
-	@include tooSmall {
-		display: none;
-	}
+    @include tooSmall {
+        display: none;
+    }
 
-	#{$hero}-wrapper {
-		max-height: 550px;
+    #{$hero}-wrapper {
+        max-height: rem-calc(550);
 
-		@include borderRadius;
+        @include borderRadius;
 
-		@include laptop {
-			max-height: 450px;
-		}
+        @include laptop {
+            max-height: rem-calc(450);
+        }
 
-		@include phablet {
-			max-height: 350px;
-		}
+        @include phablet {
+            max-height: rem-calc(350);
+        }
 
-		@include mobile {
-			max-height: 275px;
-			border-radius: 0;
-		}
+        @include mobile {
+            max-height: rem-calc(275);
+            border-radius: 0;
+        }
 
-		@include compact {
-			max-height: 237.5px;
-		}
+        @include compact {
+            max-height: rem-calc(237.5);
+        }
 
-		@include mini {
-			max-height: 175px;
-		}
+        @include mini {
+            max-height: rem-calc(175);
+        }
 
-		#{$hero}-slide {
-			#{$hero}-image {
-				opacity: 0.95;
-			}
+        #{$hero}-slide {
+            #{$hero}-image {
+                opacity: 0.95;
+            }
 
-			&-box {
-				position: absolute;
-				top: 22em;
-				right: 0;
-				max-width: 600px;
-				padding: 1.5em;
-				background: $white;
+            &-box {
+                position: absolute;
+                top: 22em;
+                right: 0;
+                max-width: rem-calc(600);
+                padding: rem-calc(24);
+                background: $white;
 
-				@include borderRadius(0.25em 0 0 0.25em);
+                @include borderRadius(0.25em 0 0 0.25em);
 
-				@include laptop {
-					top: 16.5em;
-				}
+                @include laptop {
+                    top: 16.5em;
+                }
 
-				@include tablet {
-					top: 18em;
-					max-width: 100%;
-					background: rgba($green, 0.375);
-					color: $white;
-					padding: 1em 1.5em 3em 1.5em;
-					width: 100%;
+                @include tablet {
+                    top: 18em;
+                    max-width: 100%;
+                    background: rgba($green, 0.375);
+                    color: $white;
+                    padding: rem-calc(16 24 48 24);
+                    width: 100%;
 
-					@include borderRadius(0);
-				}
+                    @include borderRadius(0);
+                }
 
-				@include phablet {
-					top: 12em;
-				}
+                @include phablet {
+                    top: 12em;
+                }
 
-				@include mobile {
-					padding: 1em 1em 2em 1em;
-					top: 9.5em;
+                @include mobile {
+                    padding: rem-calc(16 16 32 16);
+                    top: 9.5em;
 
-					h1 {
-						font-size: x-large;
-					}
-				}
+                    h1 {
+                        font-size: x-large;
+                    }
+                }
 
-				@include compact {
-					top: 7.25em;
-				}
+                @include compact {
+                    top: 7.25em;
+                }
 
-				@include mini {
-					display: none;
-				}
+                @include mini {
+                    display: none;
+                }
 
-				> p {
-					font-size: large;
+                > p {
+                    font-size: large;
 
-					@include clamp(2);
+                    @include clamp(2);
 
-					@include mobile {
-						font-size: medium;
-					}
-				}
-			}
+                    @include mobile {
+                        font-size: medium;
+                    }
+                }
+            }
 
-			&-buttons {
-				margin-top: 1em;
-				display: flex;
-				gap: 1em;
+            &-buttons {
+                margin-top: rem-calc(16);
+                display: flex;
+                gap: rem-calc(16);
 
-				> a {
-					// &:first-of-type {
-					// 	@include button(1);
-					// }
-					@include button(3);
-				}
-			}
-		}
-	}
+                > a {
+                    // &:first-of-type {
+                    // 	@include button(1);
+                    // }
+                    @include button(3);
+                }
+            }
+        }
+    }
 
-	&-box {
-		position: absolute;
-	}
+    &-box {
+        position: absolute;
+    }
 }

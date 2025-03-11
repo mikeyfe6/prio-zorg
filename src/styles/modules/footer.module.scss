@@ -15,37 +15,37 @@
         #{$this}-top-wrapper {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
-            gap: 3em 1.5em;
+            gap: rem-calc(48 24);
 
-            @include container($paddingY: 2em);
+            @include container($paddingY: rem-calc(32));
 
             @include laptop {
                 grid-template-columns: repeat(2, 1fr);
             }
 
             @include tablet {
-                padding-top: 2.5em;
-                padding-bottom: 2.5em;
+                padding-top: rem-calc(40);
+                padding-bottom: rem-calc(40);
             }
 
             @include mobile {
                 grid-template-columns: 1fr;
-                gap: 2em;
+                gap: rem-calc(32);
             }
 
             .socials {
                 h6 {
-                    margin-bottom: 0.75em;
+                    margin-bottom: rem-calc(12);
                 }
 
                 ul {
                     display: flex;
-                    gap: 1em;
+                    gap: rem-calc(16);
 
                     li {
                         a {
                             color: $black;
-                            font-size: 1.875em;
+                            font-size: rem-calc(30);
 
                             &:hover {
                                 opacity: 0.75;
@@ -61,8 +61,8 @@
                 ul {
                     li {
                         &:nth-of-type(3) {
-                            margin-top: 1em;
-                            margin-bottom: 1em;
+                            margin-top: rem-calc(16);
+                            margin-bottom: rem-calc(16);
                         }
                     }
                 }
@@ -70,18 +70,18 @@
 
             .general {
                 h6 {
-                    margin-bottom: 0.75em;
+                    margin-bottom: rem-calc(12);
                 }
 
                 ul {
                     display: flex;
                     flex-direction: column;
-                    gap: 0.5em;
+                    gap: rem-calc(8);
 
                     li {
                         a {
                             i {
-                                margin-right: 0.5em;
+                                margin-right: rem-calc(8);
                                 color: $black;
                             }
                         }
@@ -90,7 +90,7 @@
             }
 
             .logo {
-                width: 250px;
+                width: rem-calc(250);
 
                 @include tooSmall {
                     width: -webkit-fill-available;
@@ -117,13 +117,13 @@
             @include container;
 
             @include mobile {
-                padding: 0 1.5em;
+                padding: rem-calc(0 24);
             }
 
             > div {
                 text-align: center;
                 font-size: small;
-                padding: 0.75em 0;
+                padding: rem-calc(12 0);
 
                 a {
                     font-weight: 600;

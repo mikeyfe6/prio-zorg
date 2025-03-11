@@ -1,45 +1,45 @@
-@use '../customs' as *;
+@use "../customs" as *;
 
 .actual {
-	&.collapsible {
-		display: flex;
-		justify-content: space-between;
-		margin: 2em 0;
-		border: 1px solid rgba($black, 1);
+    &.collapsible {
+        display: flex;
+        justify-content: space-between;
+        margin: rem-calc(32 0);
+        border: 1px solid rgba($black, 1);
 
-		@include borderRadius;
-		@include boxShadow(1);
+        @include borderRadius;
+        @include boxShadow(1);
 
-		@include phablet {
-			flex-direction: column;
-		}
+        @include phablet {
+            flex-direction: column;
+        }
 
-		.headers {
-			display: flex;
-			flex-direction: column;
-			border-right: 1px solid rgba($black, 1);
-			background: rgba($green, 0.375);
+        .headers {
+            display: flex;
+            flex-direction: column;
+            border-right: 1px solid rgba($black, 1);
+            background: rgba($green, 0.375);
 
-			@include phablet {
-				border-right: none;
-				border-bottom: 1px solid rgba($black, 1);
-			}
+            @include phablet {
+                border-right: none;
+                border-bottom: 1px solid rgba($black, 1);
+            }
 
-			.header {
-				cursor: pointer;
-				white-space: nowrap;
-				padding: 0.5em 1em;
-				margin-bottom: 0;
+            .header {
+                cursor: pointer;
+                white-space: nowrap;
+                padding: rem-calc(8 16);
+                margin-bottom: 0;
 
-				&.active {
-					background: rgba($green, 0.5);
-				}
-			}
-		}
+                &.active {
+                    background: rgba($green, 0.5);
+                }
+            }
+        }
 
-		.content {
-			flex-grow: 1;
-			padding: 1em;
-		}
-	}
+        .content {
+            flex-grow: 1;
+            padding: rem-calc(16);
+        }
+    }
 }
