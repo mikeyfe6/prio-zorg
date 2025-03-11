@@ -1,4 +1,4 @@
-@use "../customs" as *;
+@use "../../customs" as *;
 
 .usp {
     > h2 {
@@ -131,7 +131,7 @@
                     rgba($white, 0.675),
                     rgba($green, 0.65)
                 ),
-                url("../../images/usp/coaching.jpg") no-repeat center 25% /
+                url("../../../images/usp/coaching.jpg") no-repeat center 25% /
                     cover;
         }
 
@@ -141,7 +141,7 @@
                     rgba($white, 0.675),
                     rgba($green, 0.65)
                 ),
-                url("../../images/usp/mentoring.avif") no-repeat center 25% /
+                url("../../../images/usp/mentoring.avif") no-repeat center 25% /
                     cover;
         }
 
@@ -151,8 +151,8 @@
                     rgba($white, 0.675),
                     rgba($green, 0.65)
                 ),
-                url("../../images/usp/opvoedondersteuning.jpg") no-repeat center
-                    50% / cover;
+                url("../../../images/usp/opvoedondersteuning.jpg") no-repeat
+                    center 50% / cover;
         }
 
         &-bemiddeling {
@@ -161,8 +161,8 @@
                     rgba($white, 0.675),
                     rgba($green, 0.65)
                 ),
-                url("../../images/usp/bemiddeling.jpg") no-repeat center 62.5% /
-                    cover;
+                url("../../../images/usp/bemiddeling.jpg") no-repeat center
+                    62.5% / cover;
         }
 
         button {

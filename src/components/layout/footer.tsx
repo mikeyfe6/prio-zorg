@@ -6,7 +6,7 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image";
 
 import { useSiteMetadata } from "../../hooks/use-site-metadata";
 
-import * as footerStyles from "../../styles/modules/footer.module.scss";
+import * as footerStyles from "../../styles/modules/layout/footer.module.scss";
 
 const Footer: React.FC = () => {
     const data = useStaticQuery(graphql`
@@ -113,10 +113,10 @@ const Footer: React.FC = () => {
             </div>
             <div className={footerStyles.footerBottomBar} id="footer-bottombar">
                 <div className={footerStyles.footerBottomWrapper}>
-                    <div>
+                    <p>
                         <b>©</b> {currentYear} · {companyName}
-                    </div>
-                    <div>
+                    </p>
+                    <p>
                         Webcrafted by{" "}
                         <a
                             href="https://menefex.nl/"
@@ -125,7 +125,7 @@ const Footer: React.FC = () => {
                         >
                             Menefex
                         </a>
-                    </div>
+                    </p>
                 </div>
             </div>
         </footer>

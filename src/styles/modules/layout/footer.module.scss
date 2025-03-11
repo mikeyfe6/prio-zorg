@@ -1,4 +1,4 @@
-@use "../customs" as *;
+@use "../../customs" as *;
 
 .footer {
     $this: &;
@@ -120,7 +120,7 @@
                 padding: rem-calc(0 24);
             }
 
-            > div {
+            > p {
                 text-align: center;
                 font-size: small;
                 padding: rem-calc(12 0);

@@ -2,7 +2,7 @@ import * as React from "react";
 
 import { useSiteMetadata } from "../../hooks/use-site-metadata";
 
-import * as formStyles from "../../styles/modules/form.module.scss";
+import * as formStyles from "../../styles/modules/forms/form.module.scss";
 
 const Form: React.FC = () => {
     const {

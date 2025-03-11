@@ -21,7 +21,7 @@ import "swiper/scss/parallax";
 import "swiper/scss/autoplay";
 import "swiper/scss/a11y";
 
-import * as heroStyles from "../../styles/modules/hero.module.scss";
+import * as heroStyles from "../../styles/modules/layout/hero.module.scss";
 
 // TODO: toon/hide hero button op basis van pagina
 

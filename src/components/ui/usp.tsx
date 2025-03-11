@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-import * as uspStyles from "../../styles/modules/usp.module.scss";
+import * as uspStyles from "../../styles/modules/ui/usp.module.scss";
 
 interface Service {
     name: string;

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-import * as actualStyles from "../styles/modules/actual.module.scss";
+import * as actualStyles from "../styles/modules/ui/actual.module.scss";
 
 interface Item {
     header: string;

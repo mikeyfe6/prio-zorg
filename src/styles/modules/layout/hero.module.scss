@@ -1,4 +1,4 @@
-@use "../customs" as *;
+@use "../../customs" as *;
 
 .hero {
     $hero: &;
@@ -112,9 +112,5 @@
                 }
             }
         }
-    }
-
-    &-box {
-        position: absolute;
     }
 }
