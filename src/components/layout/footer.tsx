@@ -4,9 +4,9 @@ import { graphql, useStaticQuery, Link } from "gatsby";
 
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 
-import { useSiteMetadata } from "../hooks/use-site-metadata";
+import { useSiteMetadata } from "../../hooks/use-site-metadata";
 
-import * as footerStyles from "../styles/modules/footer.module.scss";
+import * as footerStyles from "../../styles/modules/footer.module.scss";
 
 const Footer: React.FC = () => {
     const data = useStaticQuery(graphql`

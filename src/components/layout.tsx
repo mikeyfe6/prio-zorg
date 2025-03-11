@@ -1,8 +1,8 @@
 import * as React from "react";
 
-import Header from "./header";
-import Hero from "./hero";
-import Footer from "./footer";
+import Header from "./layout/header";
+import Hero from "./layout/hero";
+import Footer from "./layout/footer";
 
 import ResponsiveTag from "./helpers/respoTag";
 

@@ -6,7 +6,7 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image";
 
 import Hamburger from "./hamburger";
 
-import * as headerStyles from "../styles/modules/header.module.scss";
+import * as headerStyles from "../../styles/modules/header.module.scss";
 
 const Header: React.FC = () => {
     const data = useStaticQuery(graphql`
