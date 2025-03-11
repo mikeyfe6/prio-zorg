@@ -1,30 +1,30 @@
-import React from 'react';
+import * as React from "react";
 
-import Header from './header';
-import Hero from './hero';
-import Footer from './footer';
+import Header from "./header";
+import Hero from "./hero";
+import Footer from "./footer";
 
-import ResponsiveTag from './helpers/respoTag';
+import ResponsiveTag from "./helpers/respoTag";
 
-import '../styles/layout.scss';
+import "../styles/layout.scss";
 
 interface LayoutProps {
-	children: React.ReactNode;
+    children: React.ReactNode;
 }
 
 const Layout: React.FC<LayoutProps> = ({ children }) => {
-	return (
-		<>
-			<div className='prio-zorg'>
-				<Header />
-				<Hero />
-				<main>{children}</main>
-				<Footer />
-			</div>
+    return (
+        <>
+            <div className="prio-zorg">
+                <Header />
+                <Hero />
+                <main>{children}</main>
+                <Footer />
+            </div>
 
-			{process.env.NODE_ENV === 'development' && <ResponsiveTag />}
-		</>
-	);
+            {process.env.NODE_ENV === "development" && <ResponsiveTag />}
+        </>
+    );
 };
 
 export default Layout;

@@ -1,6 +1,7 @@
-import React from "react";
+import * as React from "react";
 
 import { graphql, useStaticQuery, Link } from "gatsby";
+
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 
 import { useSiteMetadata } from "../hooks/use-site-metadata";
