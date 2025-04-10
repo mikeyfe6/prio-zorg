@@ -58,11 +58,21 @@ const Form: React.FC = () => {
                 <h5>Vul hieronder je gegevens in</h5>
                 <div>
                     <label htmlFor="formFirstName">Voornaam</label>
-                    <input type="text" name="firstName" id="formFirstName" />
+                    <input
+                        type="text"
+                        name="firstName"
+                        id="formFirstName"
+                        required
+                    />
                 </div>
                 <div>
                     <label htmlFor="formLastName">Achternaam</label>
-                    <input type="text" name="lastName" id="formLastName" />
+                    <input
+                        type="text"
+                        name="lastName"
+                        id="formLastName"
+                        required
+                    />
                 </div>
                 <div>
                     <label htmlFor="formCompany">Bedrijfsnaam</label>
@@ -70,15 +80,20 @@ const Form: React.FC = () => {
                 </div>
                 <div>
                     <label htmlFor="formPhoneNr">Telefoonnummer</label>
-                    <input type="tel" name="phone" id="formPhoneNr" />
+                    <input type="tel" name="phone" id="formPhoneNr" required />
                 </div>
                 <div>
                     <label htmlFor="formEmail">E-mailadres</label>
-                    <input type="email" name="email" id="formEmail" />
+                    <input type="email" name="email" id="formEmail" required />
                 </div>
                 <div>
                     <label htmlFor="formMessage">Bericht</label>
-                    <textarea name="message" id="formMessage" rows={7} />
+                    <textarea
+                        name="message"
+                        id="formMessage"
+                        rows={7}
+                        required
+                    />
                 </div>
                 <div>
                     <button type="submit">Versturen</button>
