@@ -17,7 +17,7 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "gatsby": "^5.14.1",
+    "gatsby": "^5.14.3",
     "gatsby-plugin-canonical-urls": "^5.14.0",
     "gatsby-plugin-catch-links": "^5.14.0",
     "gatsby-plugin-google-tagmanager": "^5.14.0",
@@ -33,13 +33,13 @@
     "gatsby-transformer-sharp": "^5.14.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "sass": "^1.85.1",
-    "swiper": "^11.2.5"
+    "sass": "^1.86.3",
+    "swiper": "^11.2.6"
   },
   "devDependencies": {
-    "@types/node": "^22.13.10",
-    "@types/react": "^19.0.10",
-    "@types/react-dom": "^19.0.4",
-    "typescript": "^5.8.2"
+    "@types/node": "^22.14.0",
+    "@types/react": "^19.1.0",
+    "@types/react-dom": "^19.1.2",
+    "typescript": "^5.8.3"
   }
 }
