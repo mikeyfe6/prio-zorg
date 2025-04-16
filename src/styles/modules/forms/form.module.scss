@@ -56,6 +56,10 @@
                 justify-content: flex-end;
                 cursor: pointer;
 
+                &:not([for="formMessage"]) {
+                    align-items: center;
+                }
+
                 @include fluid-typing(14, 16);
 
                 @include mobile {
