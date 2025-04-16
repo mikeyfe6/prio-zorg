@@ -111,7 +111,7 @@
         color: $green;
 
         &:hover {
-            background: rgba($green, 0.1);
+            background: color.adjust($white, $lightness: -5%);
         }
     }
 
