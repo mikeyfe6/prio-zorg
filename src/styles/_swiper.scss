@@ -5,18 +5,18 @@
     &-button-next {
         color: var(--swiper-theme-color);
         transform: scale(67.5%) translateY(-50%);
-
         width: rem-calc(100) !important;
         height: rem-calc(100) !important;
+        display: none;
 
-        @include mobile {
-            display: none;
+        @include phablet {
+            display: flex;
         }
 
         &:hover {
             background: rgba($white, 0.375);
 
-            @include borderRadius;
+            @include border-radius;
         }
     }
 
@@ -33,9 +33,10 @@
             --swiper-pagination-bullet-height,
             var(--swiper-pagination-bullet-size, 10px)
         ) !important;
+        display: none;
 
-        @include mobile {
-            display: none;
+        @include phablet {
+            display: inline-block;
         }
 
         &:hover {

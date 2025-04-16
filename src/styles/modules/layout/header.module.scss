@@ -4,7 +4,7 @@
     height: rem-calc(92);
     margin-bottom: rem-calc(32);
 
-    @include fullWidth;
+    @include full-width;
 
     &-container {
         position: fixed;
@@ -30,44 +30,6 @@
         width: rem-calc(200);
     }
 
-    .menu {
-        display: flex;
-        align-items: center;
-
-        @include mobile {
-            display: none;
-        }
-
-        ul {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            border: 1px solid rgba($black, 1);
-
-            min-height: rem-calc(40);
-            overflow: hidden;
-
-            @include borderRadius;
-            @include boxShadow(1);
-
-            li {
-                a {
-                    padding: rem-calc(12 16);
-
-                    @include smoothTrans;
-
-                    &.active {
-                        background: rgba($green, 0.375);
-                    }
-
-                    &:hover {
-                        background: rgba($green, 0.625);
-                    }
-                }
-            }
-        }
-    }
-
     .mobile {
         display: none;
         position: absolute;
@@ -79,11 +41,13 @@
         outline: 1px solid rgba($black, 1);
         border: 10px solid rgba($green, 0.75);
 
-        @include borderRadius;
+        @include border-radius;
 
-        @include mobile {
-            &.open {
-                display: block;
+        &.open {
+            display: block;
+
+            @include mobile {
+                display: none;
             }
         }
 
@@ -106,11 +70,48 @@
                     &.active {
                         background: rgba($white, 1);
 
-                        &:before {
+                        &::before {
                             content: ">";
                             color: $green;
                             padding-right: rem-calc(8);
                         }
+                    }
+                }
+            }
+        }
+    }
+
+    .menu {
+        display: none;
+
+        @include mobile {
+            display: flex;
+            align-items: center;
+        }
+
+        ul {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border: 1px solid rgba($black, 1);
+            min-height: rem-calc(40);
+            overflow: hidden;
+
+            @include border-radius;
+            @include box-shadow(1);
+
+            li {
+                a {
+                    padding: rem-calc(12 16);
+
+                    @include smooth-trans;
+
+                    &.active {
+                        background: rgba($green, 0.375);
+                    }
+
+                    &:hover {
+                        background: rgba($green, 0.625);
                     }
                 }
             }

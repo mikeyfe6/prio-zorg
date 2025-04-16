@@ -7,53 +7,59 @@
 
 @mixin container(
     $maxWidth: rem-calc(1400),
+    $mobPaddingY: 0,
+    $mobPaddingX: rem-calc(20),
     $paddingY: 0,
     $paddingX: rem-calc(32),
-    $mobPaddingY: 0,
-    $mobPaddingX: rem-calc(24),
     $type: 1
 ) {
     max-width: $maxWidth;
     margin: 0 auto;
-    padding: $paddingY $paddingX;
     width: 100%;
+    padding: $mobPaddingY $mobPaddingX;
 
     @include mobile {
-        padding: $mobPaddingY $mobPaddingX;
+        padding: $paddingY $paddingX;
     }
 }
 
-@mixin smoothTrans($style: all) {
+@mixin smooth-trans($style: all) {
     transition: $style 0.15s ease-in-out;
 }
 
 @mixin link {
-    @include smoothTrans;
+    @include smooth-trans;
 
-    &:hover {
-        // text-decoration: underline;
-        // text-underline-offset: 2px;
-        // text-decoration-color: $gold;
-    }
+    // &:hover {
+    // text-decoration: underline;
+    // text-underline-offset: 2px;
+    // text-decoration-color: $gold;
+    // }
 }
 
-@mixin fullWidth {
+@mixin full-width {
     width: 100vw;
     position: relative;
     left: 50%;
     right: 50%;
     margin-left: -50vw;
     margin-right: -50vw;
+}
 
-    @include tooSmall {
-        position: static;
-        margin-left: 0;
-        margin-right: 0;
-        width: -webkit-fill-available;
+@mixin full-width-reset($type: "width") {
+    position: static;
+    margin-left: unset;
+    margin-right: unset;
+
+    @if $type == "width" {
+        width: 100%;
+    } @else if $type == "max-width" {
+        max-width: 100%;
+        width: fit-content;
     }
 }
 
-@mixin borderRadius($radius: 0.25em) {
+@mixin border-radius($radius: 0.25em) {
     border-radius: $radius;
 }
 
@@ -65,12 +71,12 @@
     overflow: hidden;
 }
 
-@mixin boxShadow($type: 1) {
+@mixin box-shadow($type: 1) {
     @if $type == 1 {
-        box-shadow: 0 0 1em rgba(0, 0, 0, 0.1);
+        box-shadow: 0 0 1em rgba(0 0 0 / 10%);
     } @else if $type == 2 {
-        box-shadow: 0 4px 4px 0 rgba(172, 178, 185, 0.5),
-            0 0 8px 0 rgba(172, 178, 185, 0.5);
+        box-shadow: 0 4px 4px 0 rgba(172 178 185 / 50%),
+            0 0 8px 0 rgba(172 178 185 / 50%);
     }
 }
 
@@ -88,29 +94,24 @@
     cursor: pointer;
 
     @include ellipsis;
-    @include borderRadius;
-    @include boxShadow(1);
-    @include smoothTrans;
+    @include border-radius;
+    @include box-shadow(1);
+    @include smooth-trans;
 
     @if $type == 1 {
-        &:hover {
-            background: rgba($green, 0.5);
-        }
-    } @else if $type == 2 {
-        background: rgba($white, 0.95);
-        color: $green;
-
-        &:hover {
-            background: rgba($green, 1);
-            color: $white;
-        }
-    } @else if $type == 3 {
         background: rgba($green, 0.95);
         color: $white;
 
         &:hover {
             background: color.adjust($green, $lightness: -5%);
             color: $white;
+        }
+    } @else if $type == 2 {
+        background: rgba($white, 0.95);
+        color: $green;
+
+        &:hover {
+            background: rgba($green, 0.1);
         }
     }
 

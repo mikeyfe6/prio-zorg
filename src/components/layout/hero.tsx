@@ -44,13 +44,11 @@ const Hero: React.FC = () => {
                 className={heroStyles.heroWrapper}
             >
                 <SwiperSlide className={heroStyles.heroSlide}>
-                    <div className={heroStyles.heroImage}>
-                        <StaticImage
-                            src="../../images/hero/hands.jpg"
-                            alt="hero 1"
-                            layout="fullWidth"
-                        />
-                    </div>
+                    <StaticImage
+                        src="../../images/hero/hands.jpg"
+                        alt="hero 1"
+                        layout="fullWidth"
+                    />
                     <div className={heroStyles.heroSlideBox}>
                         <h1>Welkom bij Prio Zorg</h1>
 
@@ -61,22 +59,18 @@ const Hero: React.FC = () => {
                     </div>
                 </SwiperSlide>
                 <SwiperSlide className={heroStyles.heroSlide}>
-                    <div className={heroStyles.heroImage}>
-                        <StaticImage
-                            src="../../images/hero/future.jpg"
-                            alt="hero 2"
-                            layout="fullWidth"
-                        />
-                    </div>
+                    <StaticImage
+                        src="../../images/hero/future.jpg"
+                        alt="hero 2"
+                        layout="fullWidth"
+                    />
                 </SwiperSlide>
                 <SwiperSlide className={heroStyles.heroSlide}>
-                    <div className={heroStyles.heroImage}>
-                        <StaticImage
-                            src="../../images/hero/jump.jpg"
-                            alt="hero 3"
-                            layout="fullWidth"
-                        />
-                    </div>
+                    <StaticImage
+                        src="../../images/hero/jump.jpg"
+                        alt="hero 3"
+                        layout="fullWidth"
+                    />
                 </SwiperSlide>
             </Swiper>
         </section>

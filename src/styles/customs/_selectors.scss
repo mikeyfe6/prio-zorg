@@ -1,0 +1,23 @@
+@use "colors" as *;
+@use "functions" as *;
+
+%footer-column {
+    h6 {
+        margin-bottom: rem-calc(12);
+    }
+
+    ul {
+        display: flex;
+        flex-direction: column;
+        gap: rem-calc(8);
+
+        li {
+            a {
+                i {
+                    margin-right: rem-calc(8);
+                    color: $black;
+                }
+            }
+        }
+    }
+}

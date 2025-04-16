@@ -10,27 +10,25 @@
         background: linear-gradient(90deg, rgba($black, 0.075), $white);
         width: 100%;
 
-        @include fullWidth;
+        @include full-width;
 
         #{$this}-top-wrapper {
             display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: rem-calc(48 24);
+            grid-template-columns: 1fr;
+            gap: rem-calc(32);
 
-            @include container($paddingY: rem-calc(32));
-
-            @include laptop {
-                grid-template-columns: repeat(2, 1fr);
-            }
+            @include container(
+                $mobPaddingY: rem-calc(32),
+                $paddingY: rem-calc(32)
+            );
 
             @include tablet {
-                padding-top: rem-calc(40);
-                padding-bottom: rem-calc(40);
+                grid-template-columns: repeat(2, 1fr);
+                gap: rem-calc(48 24);
             }
 
-            @include mobile {
-                grid-template-columns: 1fr;
-                gap: rem-calc(32);
+            @include laptop {
+                grid-template-columns: repeat(4, 1fr);
             }
 
             .socials {
@@ -55,8 +53,12 @@
                 }
             }
 
+            .general {
+                @extend %footer-column;
+            }
+
             .list {
-                @extend .general;
+                @extend %footer-column;
 
                 ul {
                     li {
@@ -68,38 +70,13 @@
                 }
             }
 
-            .general {
-                h6 {
-                    margin-bottom: rem-calc(12);
-                }
-
-                ul {
-                    display: flex;
-                    flex-direction: column;
-                    gap: rem-calc(8);
-
-                    li {
-                        a {
-                            i {
-                                margin-right: rem-calc(8);
-                                color: $black;
-                            }
-                        }
-                    }
-                }
-            }
-
             .logo {
                 width: rem-calc(250);
-
-                @include tooSmall {
-                    width: -webkit-fill-available;
-                }
 
                 img {
                     overflow: hidden;
 
-                    @include borderRadius;
+                    @include border-radius;
                 }
             }
         }
@@ -108,17 +85,13 @@
     &-bottom-bar {
         background: rgba($green, 0.5);
 
-        @include fullWidth;
+        @include full-width;
 
         #{$this}-bottom-wrapper {
             display: flex;
             justify-content: space-between;
 
             @include container;
-
-            @include mobile {
-                padding: rem-calc(0 24);
-            }
 
             > p {
                 text-align: center;

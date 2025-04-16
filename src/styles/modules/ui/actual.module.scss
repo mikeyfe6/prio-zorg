@@ -6,23 +6,25 @@
         justify-content: space-between;
         margin: rem-calc(32 0);
         border: 1px solid rgba($black, 1);
+        flex-direction: column;
 
-        @include borderRadius;
-        @include boxShadow(1);
+        @include border-radius;
+        @include box-shadow(1);
 
         @include phablet {
-            flex-direction: column;
+            flex-direction: row;
         }
 
         .headers {
             display: flex;
             flex-direction: column;
-            border-right: 1px solid rgba($black, 1);
             background: rgba($green, 0.375);
+            border-bottom: 1px solid rgba($black, 1);
+            border-right: none;
 
             @include phablet {
-                border-right: none;
-                border-bottom: 1px solid rgba($black, 1);
+                border-right: 1px solid rgba($black, 1);
+                border-bottom: none;
             }
 
             .header {

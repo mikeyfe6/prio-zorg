@@ -14,25 +14,25 @@
     --swiper-navigation-sides-offset: 0px !important;
 }
 
-html,
-body {
-    min-width: rem-calc(320);
+html {
+    scroll-behavior: smooth;
 }
 
 body {
     font-family: Poppins, sans-serif;
     letter-spacing: 0.25px;
     background: linear-gradient(90deg, rgba($green, 0.05), $white);
+    min-width: rem-calc(320);
 
     @include container;
 }
 
 main {
     flex: 1;
-    padding: rem-calc(40 0);
+    padding: rem-calc(32 0 40);
 
     @include mobile {
-        padding: rem-calc(32 0 40);
+        padding: rem-calc(40 0);
     }
 
     p {
@@ -57,7 +57,7 @@ a:not(#usp a, #footer-socials a, #footer-logo a, #footer-bottombar a) {
     main & {
         font-weight: 600;
 
-        @include smoothTrans(text-decoration-line);
+        @include smooth-trans(text-decoration-line);
 
         &:hover {
             text-decoration: underline;
@@ -68,9 +68,9 @@ a:not(#usp a, #footer-socials a, #footer-logo a, #footer-bottombar a) {
     }
 
     footer & {
-        @include smoothTrans(text-decoration-line);
+        @include smooth-trans(text-decoration-line);
 
-        &:after {
+        &::after {
             content: "➤";
             visibility: hidden;
             color: $green;
@@ -78,7 +78,7 @@ a:not(#usp a, #footer-socials a, #footer-logo a, #footer-bottombar a) {
         }
 
         &:hover {
-            &:after {
+            &::after {
                 visibility: visible;
             }
         }
@@ -94,14 +94,14 @@ a:not(#usp a, #footer-socials a, #footer-logo a, #footer-bottombar a) {
     }
 
     &-intro {
-        line-height: rem-calc(28.5);
         font-size: larger;
     }
 
     &-title {
-        @extend h1;
-
         padding-right: rem-calc(2);
+        font-weight: 600;
+
+        @include fluid-typing(28, 32);
     }
 }
 

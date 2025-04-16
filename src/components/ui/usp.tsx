@@ -1,12 +1,15 @@
 import React, { useState } from "react";
 
+import { GatsbyImage } from "gatsby-plugin-image";
+import { useSrcImages } from "../../hooks/use-src-image";
+
 import * as uspStyles from "../../styles/modules/ui/usp.module.scss";
 
 interface Service {
     name: string;
     description: string;
     iconClass: string;
-    bgClass: string;
+    image: string;
 }
 
 interface OverlayProps {
@@ -14,18 +17,26 @@ interface OverlayProps {
     onClose: () => void;
 }
 
-// TODO: refactoren van overlay image; ipv ::after de image in gatsbyImage zetten
-
 const Overlay: React.FC<OverlayProps> = ({ item, onClose }) => {
-    const overlayClass = `${uspStyles.uspOverlay} ${uspStyles[item.bgClass]}`;
+    const images = useSrcImages();
+    const imageKey = item.image as keyof typeof images;
+    const image = images[imageKey];
 
     return (
-        <div className={overlayClass}>
-            <div>
+        <div className={uspStyles.uspOverlay}>
+            <div className={uspStyles.uspContent}>
                 <h4>{item.name}</h4>
                 <p>{item.description}</p>
             </div>
             <button onClick={onClose}>Sluiten</button>
+
+            {image && (
+                <div
+                    className={`${uspStyles.uspImage} ${uspStyles[item.image]}`}
+                >
+                    <GatsbyImage image={image} alt={item.name} />
+                </div>
+            )}
         </div>
     );
 };
@@ -42,28 +53,28 @@ const Usp: React.FC = () => {
             description:
                 "Waar loop je (op) vast? Wat wil je anders? Hoe wil je hieraan werken? Samen onderzoeken we het en stellen we de doelen vast",
             iconClass: "fa-solid fa-file-invoice-dollar",
-            bgClass: "uspOverlayCoaching",
+            image: "coaching",
         },
         {
             name: "Mentoring",
             description:
                 'Een ervaren persoon die met je levensdoelen stellen helpt Iemand nodig die je helpt in verschillende transitie in het leven "We are not what we know but what we are willing to learn."',
             iconClass: "fa-solid fa-hospital-user",
-            bgClass: "uspOverlayMentoring",
+            image: "mentoring",
         },
         {
             name: "Opvoedondersteuning",
             description:
                 "Puberen, driftbuien, verkeerde vriendjes, gamen.... Opvoeden is niet altijd even gemakkelijk en is steun welkom",
             iconClass: "fa-solid fa-hand-holding-medical",
-            bgClass: "uspOverlayOpvoedondersteuning",
+            image: "opvoedondersteuning",
         },
         {
             name: "(Scheidings)bemiddeling",
             description:
                 "Een pragmatische en neutrale (cultuursensitieve) oplossing bij een (echt) scheiding of (familie) conflict nodig?",
             iconClass: "fa-solid fa-user-doctor",
-            bgClass: "uspOverlayBemiddeling",
+            image: "bemiddeling",
         },
     ];
 

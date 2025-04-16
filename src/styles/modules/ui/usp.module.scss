@@ -36,70 +36,12 @@
             rgba($black, 0.0375)
         );
         position: relative;
+        flex-direction: column;
 
-        @include borderRadius;
+        @include border-radius;
 
-        @include desktop {
-            flex-wrap: wrap;
-        }
-
-        @include mobile {
-            flex-direction: column;
-        }
-    }
-
-    &-button {
-        display: flex;
-        justify-content: center;
-
-        @include desktop {
-            width: calc(49% - 1em);
-        }
-
-        @include phablet {
-            width: 100%;
-        }
-
-        > button {
-            display: flex;
-            align-items: center;
-            gap: rem-calc(16);
-            padding: rem-calc(24 32);
-
-            width: 100%;
-            min-width: rem-calc(250);
-            font-weight: 500;
-            font-size: large;
-
-            @include boxShadow(2);
-            @include borderRadius;
-            @include smoothTrans(transform);
-
-            @include laptop {
-                padding: rem-calc(24);
-            }
-
-            > i {
-                font-size: rem-calc(32);
-                color: $green;
-                min-width: rem-calc(40);
-            }
-
-            > span {
-                @include ellipsis;
-            }
-
-            &:hover {
-                transform: translateY(-0.25em);
-                outline: 1px solid $green;
-
-                background: linear-gradient(
-                    to left,
-                    rgba($green, 0.1),
-                    $white,
-                    rgba($green, 0.01)
-                );
-            }
+        @include tablet {
+            flex-flow: wrap row;
         }
     }
 
@@ -117,59 +59,130 @@
         gap: rem-calc(32);
         padding: rem-calc(32);
         outline: 1px solid $green;
+        flex-direction: column;
+        overflow: hidden;
 
-        @include borderRadius;
-        @include boxShadow;
+        @include border-radius;
+        @include box-shadow;
 
         @include phablet {
-            flex-direction: column;
-        }
-
-        &-coaching {
-            background: linear-gradient(
-                    to left,
-                    rgba($white, 0.675),
-                    rgba($green, 0.65)
-                ),
-                url("../../../images/usp/coaching.jpg") no-repeat center 25% /
-                    cover;
-        }
-
-        &-mentoring {
-            background: linear-gradient(
-                    to left,
-                    rgba($white, 0.675),
-                    rgba($green, 0.65)
-                ),
-                url("../../../images/usp/mentoring.avif") no-repeat center 25% /
-                    cover;
-        }
-
-        &-opvoedondersteuning {
-            background: linear-gradient(
-                    to left,
-                    rgba($white, 0.675),
-                    rgba($green, 0.65)
-                ),
-                url("../../../images/usp/opvoedondersteuning.jpg") no-repeat
-                    center 50% / cover;
-        }
-
-        &-bemiddeling {
-            background: linear-gradient(
-                    to left,
-                    rgba($white, 0.675),
-                    rgba($green, 0.65)
-                ),
-                url("../../../images/usp/bemiddeling.jpg") no-repeat center
-                    62.5% / cover;
+            flex-direction: row;
         }
 
         button {
-            @include button(2);
+            z-index: 1;
+            align-self: flex-end;
 
-            @include phablet {
-                align-self: flex-end;
+            @include button(2);
+        }
+    }
+
+    &-content {
+        z-index: 1;
+    }
+
+    &-image {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 0;
+
+        &::before {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-image: linear-gradient(
+                to left,
+                rgba($white, 0.75),
+                rgba($green, 0.75)
+            );
+            z-index: 1;
+            pointer-events: none;
+        }
+
+        [data-gatsby-image-wrapper] {
+            width: 100%;
+            height: 100%;
+
+            img {
+                object-fit: cover;
+            }
+        }
+
+        &.coaching {
+            img {
+                object-position: 50% 25%;
+            }
+        }
+
+        &.mentoring {
+            img {
+                object-position: 50% 25%;
+            }
+        }
+
+        &.opvoedondersteuning {
+            img {
+                object-position: 50% 10%;
+            }
+        }
+
+        &.bemiddeling {
+            img {
+                object-position: 50% 65%;
+            }
+        }
+    }
+
+    &-button {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+
+        @include tablet {
+            width: calc(49% - 1em);
+        }
+
+        > button {
+            display: flex;
+            align-items: center;
+            gap: rem-calc(16);
+            padding: rem-calc(24);
+            width: 100%;
+            min-width: rem-calc(250);
+            font-weight: 500;
+            font-size: large;
+
+            @include box-shadow(2);
+            @include border-radius;
+            @include smooth-trans(transform);
+
+            @include laptop {
+                padding: rem-calc(24 32);
+            }
+
+            > i {
+                font-size: rem-calc(32);
+                min-width: rem-calc(40);
+                color: $green;
+            }
+
+            > span {
+                @include ellipsis;
+            }
+
+            &:hover {
+                transform: translateY(-0.25em);
+                outline: 1px solid $green;
+                background: linear-gradient(
+                    to left,
+                    rgba($green, 0.1),
+                    $white,
+                    rgba($green, 0.01)
+                );
             }
         }
     }

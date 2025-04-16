@@ -4,9 +4,10 @@
     display: flex;
     gap: rem-calc(40 56);
     margin: rem-calc(24 0);
+    flex-direction: column;
 
     @include phablet {
-        flex-direction: column;
+        flex-direction: row;
     }
 
     > div {
@@ -48,18 +49,18 @@
                 background: rgba($green, 0.5);
                 padding: rem-calc(8);
                 border-radius: rem-calc(8 0 0 8);
-                min-width: rem-calc(175);
+                min-width: rem-calc(145);
                 border: 1px solid $black;
                 font-weight: 500;
                 display: flex;
                 justify-content: flex-end;
                 cursor: pointer;
 
-                @include mobile {
-                    min-width: rem-calc(145);
-                }
-
                 @include fluid-typing(14, 16);
+
+                @include mobile {
+                    min-width: rem-calc(175);
+                }
             }
 
             > input,
@@ -75,7 +76,7 @@
             > button {
                 margin-left: auto;
 
-                @include button(3);
+                @include button(1);
             }
         }
     }

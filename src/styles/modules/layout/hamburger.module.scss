@@ -4,13 +4,13 @@
     background: rgba($green, 0.625);
     padding: rem-calc(12 8);
     height: fit-content;
-    display: none;
+    display: block;
     margin-top: rem-calc(16);
 
-    @include borderRadius;
+    @include border-radius;
 
     @include mobile {
-        display: block;
+        display: none;
     }
 
     .icon {
@@ -27,7 +27,7 @@
             background: $black;
             transition: transform 0.3s, opacity 0.3s;
 
-            @include borderRadius;
+            @include border-radius;
         }
 
         &.open .line:nth-child(1) {

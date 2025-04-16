@@ -3,98 +3,84 @@
 .hero {
     $hero: &;
 
-    @include mobile {
-        @include fullWidth;
-    }
+    @include full-width;
 
-    @include tooSmall {
-        display: none;
+    @include mobile {
+        @include full-width-reset;
     }
 
     #{$hero}-wrapper {
-        max-height: rem-calc(550);
-
-        @include borderRadius;
-
-        @include laptop {
-            max-height: rem-calc(450);
-        }
-
-        @include phablet {
-            max-height: rem-calc(350);
-        }
-
         @include mobile {
-            max-height: rem-calc(275);
-            border-radius: 0;
-        }
-
-        @include compact {
-            max-height: rem-calc(237.5);
-        }
-
-        @include mini {
-            max-height: rem-calc(175);
+            @include border-radius;
         }
 
         #{$hero}-slide {
-            #{$hero}-image {
+            [data-gatsby-image-wrapper] {
+                aspect-ratio: 16 / 9;
                 opacity: 0.95;
+                height: 100%;
+                width: 100%;
+
+                @include mobile {
+                    aspect-ratio: 16 / 7.5;
+                }
+
+                @include tablet {
+                    aspect-ratio: 16 / 6.5;
+                }
+
+                @include wide {
+                    aspect-ratio: 16 / 6;
+                }
+
+                img {
+                    object-position: center 25%;
+                }
             }
 
             &-box {
                 position: absolute;
-                top: 22em;
-                right: 0;
-                max-width: rem-calc(600);
-                padding: rem-calc(24);
-                background: $white;
+                max-width: 100%;
+                background: rgba($green, 0.375);
+                color: $white;
+                padding: rem-calc(16 16 24 16);
+                width: 100%;
+                bottom: 0;
 
-                @include borderRadius(0.25em 0 0 0.25em);
-
-                @include laptop {
-                    top: 16.5em;
-                }
-
-                @include tablet {
-                    top: 18em;
-                    max-width: 100%;
-                    background: rgba($green, 0.375);
-                    color: $white;
-                    padding: rem-calc(16 24 48 24);
-                    width: 100%;
-
-                    @include borderRadius(0);
+                @include mobile {
+                    padding: rem-calc(16 24 24 24);
                 }
 
                 @include phablet {
-                    top: 12em;
+                    right: 0;
+                    padding: rem-calc(16 24 36 24);
                 }
 
-                @include mobile {
-                    padding: rem-calc(16 16 32 16);
-                    top: 9.5em;
+                @include tablet {
+                    bottom: rem-calc(12);
+                    max-width: fit-content;
+                    padding: rem-calc(24);
+                    background: $white;
+                    color: $black;
 
-                    h1 {
-                        font-size: x-large;
-                    }
+                    @include border-radius(0.25em 0 0 0.25em);
                 }
 
-                @include compact {
-                    top: 7.25em;
+                @include laptop {
+                    bottom: rem-calc(24);
                 }
 
-                @include mini {
-                    display: none;
+                @include desktop {
+                    bottom: rem-calc(32);
                 }
 
                 > p {
-                    font-size: large;
+                    font-size: medium;
 
                     @include clamp(2);
 
                     @include mobile {
-                        font-size: medium;
+                        font-size: large;
                     }
                 }
             }
@@ -105,10 +91,13 @@
                 gap: rem-calc(16);
 
                 > a {
-                    // &:first-of-type {
-                    // 	@include button(1);
-                    // }
-                    @include button(3);
+                    &:nth-of-type(1) {
+                        @include button(2);
+                    }
+
+                    &:nth-of-type(2) {
+                        @include button(1);
+                    }
                 }
             }
         }

@@ -7,7 +7,7 @@ import { Seo } from "../components/seo";
 import Layout from "../components/layout";
 
 import Usp from "../components/ui/usp";
-// import Actual from '../components/actual';
+// import Actual from "../components/ui/actual";
 
 const IndexPage: React.FC<PageProps> = () => {
     return (
