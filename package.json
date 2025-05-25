@@ -33,16 +33,16 @@
     "gatsby-transformer-sharp": "^5.14.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "sass": "^1.86.3",
-    "swiper": "^11.2.6"
+    "sass": "^1.89.0",
+    "swiper": "^11.2.8"
   },
   "devDependencies": {
-    "@types/node": "^22.14.1",
-    "@types/react": "^19.1.2",
-    "@types/react-dom": "^19.1.2",
-    "stylelint": "^16.18.0",
+    "@types/node": "^22.15.21",
+    "@types/react": "^19.1.5",
+    "@types/react-dom": "^19.1.5",
+    "stylelint": "^16.19.1",
     "stylelint-config-prettier-scss": "^1.0.0",
-    "stylelint-config-standard-scss": "^14.0.0",
+    "stylelint-config-standard-scss": "^15.0.1",
     "typescript": "^5.8.3"
   }
 }
